@@ -1,3 +1,4 @@
+import 'package:core/core.dart';
 import 'package:core/utils/errors.dart';
 import 'package:dartz/dartz.dart';
 
@@ -12,6 +13,7 @@ class NoParam {
 }
 
 class UpdateProfileParams {
+  final String id;
   final String? firstName;
   final String? lastName;
   final String? age;
@@ -20,6 +22,7 @@ class UpdateProfileParams {
   final String? specialty;
 
   UpdateProfileParams({
+    required this.id,
     this.firstName,
     this.lastName,
     this.age,
@@ -27,6 +30,28 @@ class UpdateProfileParams {
     this.isPractitioner = false,
     this.specialty,
   }) : assert(specialty != null && isPractitioner);
+
+  Map<String, Object?> toJson(
+    final String? firstName,
+    String? lastName,
+    String? age,
+    String? profilePicture,
+    bool isPractitioner,
+    String? specialty,
+  ) {
+    return isPractitioner
+        ? <String, Object?>{
+            "last_name": lastName,
+            "age": age,
+            "profile_picture": profilePicture,
+            "specialty": specialty,
+          }
+        : <String, Object?>{
+            "last_name": lastName,
+            "age": age,
+            "profile_picture": profilePicture,
+          };
+  }
 }
 
 class UpdateAppointmentParams {

@@ -1,7 +1,15 @@
-library core;
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export "package:core/domain/usecases/common/fetch.all.appointments.dart";
+export "package:core/domain/usecases/common/signup.with.email.password.dart";
+export "package:core/domain/usecases/common/signup.with.facebook.dart";
+export "package:core/domain/usecases/common/signup.with.google.dart";
+export "package:core/domain/usecases/common/update.profile.dart";
+export "package:core/domain/usecases/patient/schedule.appointment.dart";
+export "package:core/domain/usecases/patient/update.appointment.dart";
+export "package:core/domain/usecases/practitioner/change.availability.dart";
+export "package:core/models/common/appointment.dart";
+export "package:core/models/common/day.dart";
+export "package:core/models/common/service.dart";
+export "package:core/models/patient/patient.dart";
+export "package:core/models/practitioner/practitioner.dart";
+export "package:core/utils/errors.dart";
+export "package:core/utils/typedefs.dart";

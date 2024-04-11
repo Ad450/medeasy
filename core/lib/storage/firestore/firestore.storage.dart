@@ -20,9 +20,13 @@ class FirestoreStorage {
     return snapshot.docs.first;
   }
 
-  Stream<QuerySnapshot<Object?>> getByUidStream({required String uid, required Collection collection}) {
+  Stream<QuerySnapshot<Object?>> getByUidStream({
+    required String uid,
+    required Collection collection,
+    required String key,
+  }) {
     var firestoreCollection = _getCollection(collection);
-    final snapshot = firestoreCollection.where('uid', isEqualTo: uid).snapshots();
+    final snapshot = firestoreCollection.where(key, isEqualTo: uid).snapshots();
     return snapshot;
   }
 

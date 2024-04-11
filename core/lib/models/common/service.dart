@@ -11,6 +11,5 @@ sealed class Service with _$Service {
     required String profilePicture,
   }) = _Service;
 
-  factory Service.fromJson(Map<String, Object?> json) =>
-      _$ServiceFromJson(json);
+  factory Service.fromJson(Map<String, Object?> json) => _$ServiceFromJson(json);
 }

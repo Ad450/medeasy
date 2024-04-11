@@ -7,8 +7,7 @@ class UpdateAppointment implements Usecase<VoidType, UpdateAppointmentParams> {
   final PatientRepository _patientRepository;
   UpdateAppointment(this._patientRepository);
   @override
-  Future<Either<MedeasyError, VoidType>> call(
-      UpdateAppointmentParams param) async {
+  Future<Either<MedeasyError, VoidType>> call(UpdateAppointmentParams param) async {
     try {
       return Right(await _patientRepository.updateAppointment(param));
     } catch (e) {

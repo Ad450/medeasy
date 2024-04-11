@@ -29,12 +29,12 @@ class UpdateProfileParams {
   }) : assert(specialty != null && isPractitioner);
 }
 
-class UpdateAppointment {
+class UpdateAppointmentParams {
   final String? time;
   final DateTime? date;
   final String? problemDetail;
 
-  UpdateAppointment({
+  UpdateAppointmentParams({
     this.time,
     this.date,
     this.problemDetail,

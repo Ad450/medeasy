@@ -11,7 +11,7 @@ class SignupWithFacebook implements Usecase<VoidType, NoParam> {
     try {
       return Right(await _commonRepository.signupWithFacebook());
     } catch (e) {
-      return Left(MedeasyError.fromApiException((e as ApiError).message));
+      return Left(MedeasyError.fromApiError((e as ApiError).message));
     }
   }
 }

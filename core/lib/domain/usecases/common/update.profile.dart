@@ -3,13 +3,13 @@ import 'package:core/utils/errors.dart';
 import 'package:core/utils/typedefs.dart';
 import 'package:dartz/dartz.dart';
 
-class SignupWithGoogle implements Usecase<VoidType, NoParam> {
+class UpdateProfile implements Usecase<VoidType, UpdateProfileParams> {
   final CommonRepository _commonRepository;
-  SignupWithGoogle(this._commonRepository);
+  UpdateProfile(this._commonRepository);
   @override
-  Future<Either<MedeasyError, VoidType>> call(NoParam param) async {
+  Future<Either<MedeasyError, VoidType>> call(UpdateProfileParams param) async {
     try {
-      return Right(await _commonRepository.signupWithGoogle());
+      return Right(await _commonRepository.updateProfile(param));
     } catch (e) {
       return Left(MedeasyError.fromApiError((e as ApiError).message));
     }

@@ -1,14 +1,13 @@
-import 'package:core/utils/errors.dart';
+import 'package:core/models/common/day.dart';
 import 'package:core/utils/typedefs.dart';
-import 'package:dartz/dartz.dart';
 
 abstract class PractitionerRepository {
-  Future<Either<MedeasyError, VoidType>> updateProfile(
-    UpdateProfileParams params,
-  );
-
   //TODO: change [day] to the Day object that will be used with the practitioner's Calendar
-  Future<Either<MedeasyError, VoidType>> changeAvailability(
-    String day,
-  );
+  Future<VoidType> changeAvailability(Day day);
 }
+
+//
+// firebase_core: ^2.9.0
+// firebase_auth: ^4.4.0
+// firebase_storage: ^11.1.0
+// cloud_firestore: ^4.5.0

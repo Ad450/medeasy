@@ -3,15 +3,18 @@ import 'package:core/utils/errors.dart';
 import 'package:core/utils/typedefs.dart';
 import 'package:dartz/dartz.dart';
 
-class SignupWithEmailAndPassword implements Usecase<VoidType, SignupWithEmailAndPasswordParam> {
+class SignupWithEmailAndPassword
+    implements Usecase<VoidType, SignupWithEmailAndPasswordParam> {
   final CommonRepository _commonRepository;
   SignupWithEmailAndPassword(this._commonRepository);
   @override
-  Future<Either<MedeasyError, VoidType>> call(SignupWithEmailAndPasswordParam param) async {
+  Future<Either<MedeasyError, VoidType>> call(
+      SignupWithEmailAndPasswordParam param) async {
     try {
-      return Right(await _commonRepository.signupWithEmailAndPassword(email: param.email, password: param.password));
+      return Right(await _commonRepository.signupWithEmailAndPassword(
+          email: param.email, password: param.password));
     } catch (e) {
-      return Left(MedeasyError.fromApiException((e as ApiError).message));
+      return Left(MedeasyError.fromApiError((e as ApiError).message));
     }
   }
 }
@@ -19,7 +22,8 @@ class SignupWithEmailAndPassword implements Usecase<VoidType, SignupWithEmailAnd
 sealed class SignupWithEmailAndPasswordParam {
   final String email;
   final String password;
-  SignupWithEmailAndPasswordParam({required this.email, required String rawPassword})
+  SignupWithEmailAndPasswordParam(
+      {required this.email, required String rawPassword})
       : assert(rawPassword.length > 8),
         password = _hashPassword(rawPassword);
 

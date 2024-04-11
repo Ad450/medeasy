@@ -4,7 +4,7 @@ class MedeasyError {
   final String message;
   MedeasyError._(this.message);
 
-  factory MedeasyError.fromApiException(String message, {String? source}) {
+  factory MedeasyError.fromApiError(String message, {String? source}) {
     if (source != null) {
       log(source);
     }

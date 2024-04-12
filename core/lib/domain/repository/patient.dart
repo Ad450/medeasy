@@ -1,7 +1,29 @@
 import 'package:core/models/common/appointment.dart';
 import 'package:core/utils/typedefs.dart';
 
-abstract class PatientRepository {
+sealed class PatientRepository {
   Future<VoidType> scheduleAppointment(Appointment appointment);
-  Future<VoidType> updateAppointment(UpdateAppointmentParams params);
+  Future<VoidType> updateAppointment({
+    String? time,
+    DateTime? date,
+    String? problemDetail,
+  });
+}
+
+class PatientRepositoryImpl implements PatientRepository {
+  @override
+  Future<VoidType> scheduleAppointment(Appointment appointment) {
+    // TODO: implement scheduleAppointment
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<VoidType> updateAppointment({
+    String? time,
+    DateTime? date,
+    String? problemDetail,
+  }) {
+    // TODO: implement updateAppointment
+    throw UnimplementedError();
+  }
 }

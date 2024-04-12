@@ -9,9 +9,27 @@ class UpdateAppointment implements Usecase<VoidType, UpdateAppointmentParams> {
   @override
   Future<Either<MedeasyError, VoidType>> call(UpdateAppointmentParams param) async {
     try {
-      return Right(await _patientRepository.updateAppointment(param));
+      return Right(
+        await _patientRepository.updateAppointment(
+          time: param.time,
+          date: param.date,
+          problemDetail: param.problemDetail,
+        ),
+      );
     } catch (e) {
       return Left(MedeasyError.fromApiError((e as ApiError).message));
     }
   }
+}
+
+class UpdateAppointmentParams {
+  final String? time;
+  final DateTime? date;
+  final String? problemDetail;
+
+  UpdateAppointmentParams({
+    this.time,
+    this.date,
+    this.problemDetail,
+  });
 }

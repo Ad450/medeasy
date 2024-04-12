@@ -5,6 +5,7 @@ enum Collection {
   practitioners,
   appointments,
   services,
+  day,
 }
 
 class FirestoreStorage {
@@ -14,19 +15,21 @@ class FirestoreStorage {
     return firestore.collection(collection.name);
   }
 
-  Future<QueryDocumentSnapshot<Object?>> getByUidFuture({required String uid, required Collection collection}) async {
+  Future<QueryDocumentSnapshot<Object?>> getByIdFuture({
+    required String id,
+    required Collection collection,
+  }) async {
     var firestoreCollection = _getCollection(collection);
-    final snapshot = await firestoreCollection.where('uid', isEqualTo: uid).get();
+    final snapshot = await firestoreCollection.where('id', isEqualTo: id).get();
     return snapshot.docs.first;
   }
 
-  Stream<QuerySnapshot<Object?>> getByUidStream({
-    required String uid,
+  Stream<QuerySnapshot<Object?>> getByIdStream({
+    required String id,
     required Collection collection,
-    required String key,
   }) {
     var firestoreCollection = _getCollection(collection);
-    final snapshot = firestoreCollection.where(key, isEqualTo: uid).snapshots();
+    final snapshot = firestoreCollection.where("id", isEqualTo: id).snapshots();
     return snapshot;
   }
 
@@ -40,9 +43,9 @@ class FirestoreStorage {
     await firestoreCollection.add(data);
   }
 
-  Future<void> update({required String uid, required Collection collection, required dynamic data}) async {
+  Future<void> update({required String id, required Collection collection, required dynamic data}) async {
     var firestoreCollection = _getCollection(collection);
-    final doc = await getByUidFuture(uid: uid, collection: collection);
+    final doc = await getByIdFuture(id: id, collection: collection);
 
     await firestoreCollection.doc(doc.id).update(data);
   }

@@ -15,6 +15,8 @@ _$AppointmentImpl _$$AppointmentImplFromJson(Map<String, dynamic> json) {
       'practitioner_id',
       'day_id',
       'patient_id',
+      'start_time',
+      'closing_time',
       'problem_detail'
     ],
   );
@@ -24,6 +26,8 @@ _$AppointmentImpl _$$AppointmentImplFromJson(Map<String, dynamic> json) {
     practitionerId: json['practitioner_id'] as String,
     dayId: json['day_id'] as String,
     patientId: json['patient_id'] as String,
+    startTime: json['start_time'] as String,
+    closingTime: json['closing_time'] as String,
     problemDetail: json['problem_detail'] as String,
     healthRecordFile: json['health_record_file'] as String?,
   );
@@ -36,6 +40,8 @@ Map<String, dynamic> _$$AppointmentImplToJson(_$AppointmentImpl instance) {
     'practitioner_id': instance.practitionerId,
     'day_id': instance.dayId,
     'patient_id': instance.patientId,
+    'start_time': instance.startTime,
+    'closing_time': instance.closingTime,
     'problem_detail': instance.problemDetail,
   };
 

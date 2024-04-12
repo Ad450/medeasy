@@ -1,5 +1,6 @@
 import 'package:core/models/common/appointment.dart';
 import 'package:core/storage/firestore/firestore.storage.dart';
+import 'package:core/storage/local/local.storage.dart';
 import 'package:core/utils/errors.dart';
 import 'package:core/utils/typedefs.dart';
 
@@ -9,27 +10,30 @@ sealed class CommonRepository {
   Future<VoidType> signupWithGoogle();
   Future<VoidType> signupWithFacebook();
 
-  Stream<List<Appointment>> fetchAllAppointments({required String id, required FetchAppointmentType type});
+  Stream<List<Appointment>> fetchAllAppointments(FetchAppointmentType type);
   Future<VoidType> updateProfile(Map<String, dynamic> data);
 }
 
 class CommonRepositoryImpl implements CommonRepository {
   final FirestoreStorage _firestoreStorage;
+  final LocalStorage _localStorage;
 
-  CommonRepositoryImpl(this._firestoreStorage);
+  CommonRepositoryImpl(this._firestoreStorage, this._localStorage);
 
   @override
-  Stream<List<Appointment>> fetchAllAppointments({required String id, required FetchAppointmentType type}) {
+  Stream<List<Appointment>> fetchAllAppointments(FetchAppointmentType type) {
     try {
-      var appointmentStream = _firestoreStorage.getByIdStream(
-        id: id,
-        collection: Collection.appointments,
-      );
-      return appointmentStream.map(
-        (snapshot) => snapshot.docs.map((e) => Appointment.fromJson(e.data() as Map<String, Object?>)).toList(),
-      );
+      final id = _localStorage.getString(LocalKeys.id.name);
+      final key = type == FetchAppointmentType.patient ? 'patient_id' : 'practitioner_id';
+      return _firestoreStorage.getByKeyValueStream(key: key, value: id, collection: Collection.appointments).map(
+            (snapshot) => snapshot.docs
+                .map(
+                  (e) => Appointment.fromJson(e.data() as Map<String, dynamic>),
+                )
+                .toList(),
+          );
     } catch (e) {
-      throw ApiError(e.toString(), source: "fetchAllAppointments");
+      throw ApiError(e.toString(), stackTrace: "fetchAllAppointments");
     }
   }
 

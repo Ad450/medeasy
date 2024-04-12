@@ -10,7 +10,7 @@ class FetchAllAppointments implements Usecase<Stream<List<Appointment>>, FetchAl
   @override
   Future<Either<MedeasyError, Stream<List<Appointment>>>> call(FetchAllAppointmentsParam param) async {
     try {
-      return Right(_commonRepository.fetchAllAppointments(id: param.id, type: param.type));
+      return Right(_commonRepository.fetchAllAppointments(param.type));
     } catch (e) {
       return Left(MedeasyError.fromApiError((e as ApiError).message));
     }

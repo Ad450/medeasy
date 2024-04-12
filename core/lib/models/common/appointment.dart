@@ -12,6 +12,8 @@ sealed class Appointment with _$Appointment {
     @JsonKey(name: "practitioner_id", required: true) required String practitionerId,
     @JsonKey(name: "day_id", required: true) required String dayId,
     @JsonKey(name: "patient_id", required: true) required String patientId,
+    @JsonKey(name: "start_time", required: true) required String startTime,
+    @JsonKey(name: "closing_time", required: true) required String closingTime,
     @JsonKey(name: "problem_detail", required: true) required String problemDetail,
     @JsonKey(name: "health_record_file", required: false, includeIfNull: false) String? healthRecordFile,
   }) = _Appointment;
@@ -24,6 +26,8 @@ sealed class Appointment with _$Appointment {
     required String dayId,
     required String patientId,
     required String problemDetail,
+    required String closingTime,
+    required String startTime,
     String? healthRecordFile,
   }) {
     return Appointment(
@@ -33,6 +37,8 @@ sealed class Appointment with _$Appointment {
       dayId: dayId,
       patientId: patientId,
       problemDetail: problemDetail,
+      startTime: startTime,
+      closingTime: closingTime,
     );
   }
 }

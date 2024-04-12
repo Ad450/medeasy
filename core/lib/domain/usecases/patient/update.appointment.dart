@@ -11,8 +11,10 @@ class UpdateAppointment implements Usecase<VoidType, UpdateAppointmentParams> {
     try {
       return Right(
         await _patientRepository.updateAppointment(
-          time: param.time,
-          date: param.date,
+          startTime: param.startTime,
+          dayId: param.dayId,
+          closingTime: param.closingTime,
+          appointmentId: param.appointmentId,
           problemDetail: param.problemDetail,
         ),
       );
@@ -23,13 +25,17 @@ class UpdateAppointment implements Usecase<VoidType, UpdateAppointmentParams> {
 }
 
 class UpdateAppointmentParams {
-  final String? time;
-  final DateTime? date;
+  final String? startTime;
+  final String? closingTime;
+  final String? dayId;
   final String? problemDetail;
+  final String appointmentId;
 
   UpdateAppointmentParams({
-    this.time,
-    this.date,
+    this.startTime,
+    this.closingTime,
+    this.dayId,
     this.problemDetail,
+    required this.appointmentId,
   });
 }

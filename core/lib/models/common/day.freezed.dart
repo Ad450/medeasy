@@ -26,10 +26,6 @@ mixin _$Day {
   String get practitionerId => throw _privateConstructorUsedError;
   @JsonKey(name: "day", required: true)
   String get day => throw _privateConstructorUsedError;
-  @JsonKey(name: "start_time", required: true)
-  String get startTime => throw _privateConstructorUsedError;
-  @JsonKey(name: "closing_time", required: true)
-  String get closingTime => throw _privateConstructorUsedError;
   @JsonKey(name: "booked", required: true, defaultValue: false)
   bool get booked => throw _privateConstructorUsedError;
 
@@ -47,8 +43,6 @@ abstract class $DayCopyWith<$Res> {
       {@JsonKey(name: "id", required: true) String id,
       @JsonKey(name: "practitioner_id", required: true) String practitionerId,
       @JsonKey(name: "day", required: true) String day,
-      @JsonKey(name: "start_time", required: true) String startTime,
-      @JsonKey(name: "closing_time", required: true) String closingTime,
       @JsonKey(name: "booked", required: true, defaultValue: false)
       bool booked});
 }
@@ -68,8 +62,6 @@ class _$DayCopyWithImpl<$Res, $Val extends Day> implements $DayCopyWith<$Res> {
     Object? id = null,
     Object? practitionerId = null,
     Object? day = null,
-    Object? startTime = null,
-    Object? closingTime = null,
     Object? booked = null,
   }) {
     return _then(_value.copyWith(
@@ -84,14 +76,6 @@ class _$DayCopyWithImpl<$Res, $Val extends Day> implements $DayCopyWith<$Res> {
       day: null == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
-      startTime: null == startTime
-          ? _value.startTime
-          : startTime // ignore: cast_nullable_to_non_nullable
-              as String,
-      closingTime: null == closingTime
-          ? _value.closingTime
-          : closingTime // ignore: cast_nullable_to_non_nullable
               as String,
       booked: null == booked
           ? _value.booked
@@ -111,8 +95,6 @@ abstract class _$$DayImplCopyWith<$Res> implements $DayCopyWith<$Res> {
       {@JsonKey(name: "id", required: true) String id,
       @JsonKey(name: "practitioner_id", required: true) String practitionerId,
       @JsonKey(name: "day", required: true) String day,
-      @JsonKey(name: "start_time", required: true) String startTime,
-      @JsonKey(name: "closing_time", required: true) String closingTime,
       @JsonKey(name: "booked", required: true, defaultValue: false)
       bool booked});
 }
@@ -129,8 +111,6 @@ class __$$DayImplCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res, _$DayImpl>
     Object? id = null,
     Object? practitionerId = null,
     Object? day = null,
-    Object? startTime = null,
-    Object? closingTime = null,
     Object? booked = null,
   }) {
     return _then(_$DayImpl(
@@ -145,14 +125,6 @@ class __$$DayImplCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res, _$DayImpl>
       day: null == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as String,
-      startTime: null == startTime
-          ? _value.startTime
-          : startTime // ignore: cast_nullable_to_non_nullable
-              as String,
-      closingTime: null == closingTime
-          ? _value.closingTime
-          : closingTime // ignore: cast_nullable_to_non_nullable
               as String,
       booked: null == booked
           ? _value.booked
@@ -170,8 +142,6 @@ class _$DayImpl implements _Day {
       @JsonKey(name: "practitioner_id", required: true)
       required this.practitionerId,
       @JsonKey(name: "day", required: true) required this.day,
-      @JsonKey(name: "start_time", required: true) required this.startTime,
-      @JsonKey(name: "closing_time", required: true) required this.closingTime,
       @JsonKey(name: "booked", required: true, defaultValue: false)
       required this.booked});
 
@@ -188,18 +158,12 @@ class _$DayImpl implements _Day {
   @JsonKey(name: "day", required: true)
   final String day;
   @override
-  @JsonKey(name: "start_time", required: true)
-  final String startTime;
-  @override
-  @JsonKey(name: "closing_time", required: true)
-  final String closingTime;
-  @override
   @JsonKey(name: "booked", required: true, defaultValue: false)
   final bool booked;
 
   @override
   String toString() {
-    return 'Day(id: $id, practitionerId: $practitionerId, day: $day, startTime: $startTime, closingTime: $closingTime, booked: $booked)';
+    return 'Day(id: $id, practitionerId: $practitionerId, day: $day, booked: $booked)';
   }
 
   @override
@@ -211,17 +175,12 @@ class _$DayImpl implements _Day {
             (identical(other.practitionerId, practitionerId) ||
                 other.practitionerId == practitionerId) &&
             (identical(other.day, day) || other.day == day) &&
-            (identical(other.startTime, startTime) ||
-                other.startTime == startTime) &&
-            (identical(other.closingTime, closingTime) ||
-                other.closingTime == closingTime) &&
             (identical(other.booked, booked) || other.booked == booked));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, practitionerId, day, startTime, closingTime, booked);
+  int get hashCode => Object.hash(runtimeType, id, practitionerId, day, booked);
 
   @JsonKey(ignore: true)
   @override
@@ -243,10 +202,6 @@ abstract class _Day implements Day {
       @JsonKey(name: "practitioner_id", required: true)
       required final String practitionerId,
       @JsonKey(name: "day", required: true) required final String day,
-      @JsonKey(name: "start_time", required: true)
-      required final String startTime,
-      @JsonKey(name: "closing_time", required: true)
-      required final String closingTime,
       @JsonKey(name: "booked", required: true, defaultValue: false)
       required final bool booked}) = _$DayImpl;
 
@@ -261,12 +216,6 @@ abstract class _Day implements Day {
   @override
   @JsonKey(name: "day", required: true)
   String get day;
-  @override
-  @JsonKey(name: "start_time", required: true)
-  String get startTime;
-  @override
-  @JsonKey(name: "closing_time", required: true)
-  String get closingTime;
   @override
   @JsonKey(name: "booked", required: true, defaultValue: false)
   bool get booked;

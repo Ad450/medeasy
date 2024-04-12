@@ -10,8 +10,6 @@ sealed class Day with _$Day {
     @JsonKey(name: "id", required: true) required String id,
     @JsonKey(name: "practitioner_id", required: true) required String practitionerId,
     @JsonKey(name: "day", required: true) required String day,
-    @JsonKey(name: "start_time", required: true) required String startTime,
-    @JsonKey(name: "closing_time", required: true) required String closingTime,
     @JsonKey(name: "booked", required: true, defaultValue: false) required bool booked,
   }) = _Day;
 
@@ -28,8 +26,6 @@ sealed class Day with _$Day {
       id: const Uuid().v4(),
       practitionerId: practitionerId,
       day: day,
-      startTime: startTime,
-      closingTime: closingTime,
       booked: booked,
     );
   }

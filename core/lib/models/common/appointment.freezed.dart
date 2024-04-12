@@ -30,6 +30,10 @@ mixin _$Appointment {
   String get dayId => throw _privateConstructorUsedError;
   @JsonKey(name: "patient_id", required: true)
   String get patientId => throw _privateConstructorUsedError;
+  @JsonKey(name: "start_time", required: true)
+  String get startTime => throw _privateConstructorUsedError;
+  @JsonKey(name: "closing_time", required: true)
+  String get closingTime => throw _privateConstructorUsedError;
   @JsonKey(name: "problem_detail", required: true)
   String get problemDetail => throw _privateConstructorUsedError;
   @JsonKey(name: "health_record_file", required: false, includeIfNull: false)
@@ -53,6 +57,8 @@ abstract class $AppointmentCopyWith<$Res> {
       @JsonKey(name: "practitioner_id", required: true) String practitionerId,
       @JsonKey(name: "day_id", required: true) String dayId,
       @JsonKey(name: "patient_id", required: true) String patientId,
+      @JsonKey(name: "start_time", required: true) String startTime,
+      @JsonKey(name: "closing_time", required: true) String closingTime,
       @JsonKey(name: "problem_detail", required: true) String problemDetail,
       @JsonKey(
           name: "health_record_file", required: false, includeIfNull: false)
@@ -77,6 +83,8 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
     Object? practitionerId = null,
     Object? dayId = null,
     Object? patientId = null,
+    Object? startTime = null,
+    Object? closingTime = null,
     Object? problemDetail = null,
     Object? healthRecordFile = freezed,
   }) {
@@ -100,6 +108,14 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       patientId: null == patientId
           ? _value.patientId
           : patientId // ignore: cast_nullable_to_non_nullable
+              as String,
+      startTime: null == startTime
+          ? _value.startTime
+          : startTime // ignore: cast_nullable_to_non_nullable
+              as String,
+      closingTime: null == closingTime
+          ? _value.closingTime
+          : closingTime // ignore: cast_nullable_to_non_nullable
               as String,
       problemDetail: null == problemDetail
           ? _value.problemDetail
@@ -127,6 +143,8 @@ abstract class _$$AppointmentImplCopyWith<$Res>
       @JsonKey(name: "practitioner_id", required: true) String practitionerId,
       @JsonKey(name: "day_id", required: true) String dayId,
       @JsonKey(name: "patient_id", required: true) String patientId,
+      @JsonKey(name: "start_time", required: true) String startTime,
+      @JsonKey(name: "closing_time", required: true) String closingTime,
       @JsonKey(name: "problem_detail", required: true) String problemDetail,
       @JsonKey(
           name: "health_record_file", required: false, includeIfNull: false)
@@ -149,6 +167,8 @@ class __$$AppointmentImplCopyWithImpl<$Res>
     Object? practitionerId = null,
     Object? dayId = null,
     Object? patientId = null,
+    Object? startTime = null,
+    Object? closingTime = null,
     Object? problemDetail = null,
     Object? healthRecordFile = freezed,
   }) {
@@ -173,6 +193,14 @@ class __$$AppointmentImplCopyWithImpl<$Res>
           ? _value.patientId
           : patientId // ignore: cast_nullable_to_non_nullable
               as String,
+      startTime: null == startTime
+          ? _value.startTime
+          : startTime // ignore: cast_nullable_to_non_nullable
+              as String,
+      closingTime: null == closingTime
+          ? _value.closingTime
+          : closingTime // ignore: cast_nullable_to_non_nullable
+              as String,
       problemDetail: null == problemDetail
           ? _value.problemDetail
           : problemDetail // ignore: cast_nullable_to_non_nullable
@@ -195,6 +223,8 @@ class _$AppointmentImpl implements _Appointment {
       required this.practitionerId,
       @JsonKey(name: "day_id", required: true) required this.dayId,
       @JsonKey(name: "patient_id", required: true) required this.patientId,
+      @JsonKey(name: "start_time", required: true) required this.startTime,
+      @JsonKey(name: "closing_time", required: true) required this.closingTime,
       @JsonKey(name: "problem_detail", required: true)
       required this.problemDetail,
       @JsonKey(
@@ -220,6 +250,12 @@ class _$AppointmentImpl implements _Appointment {
   @JsonKey(name: "patient_id", required: true)
   final String patientId;
   @override
+  @JsonKey(name: "start_time", required: true)
+  final String startTime;
+  @override
+  @JsonKey(name: "closing_time", required: true)
+  final String closingTime;
+  @override
   @JsonKey(name: "problem_detail", required: true)
   final String problemDetail;
   @override
@@ -228,7 +264,7 @@ class _$AppointmentImpl implements _Appointment {
 
   @override
   String toString() {
-    return 'Appointment(id: $id, serviceId: $serviceId, practitionerId: $practitionerId, dayId: $dayId, patientId: $patientId, problemDetail: $problemDetail, healthRecordFile: $healthRecordFile)';
+    return 'Appointment(id: $id, serviceId: $serviceId, practitionerId: $practitionerId, dayId: $dayId, patientId: $patientId, startTime: $startTime, closingTime: $closingTime, problemDetail: $problemDetail, healthRecordFile: $healthRecordFile)';
   }
 
   @override
@@ -244,6 +280,10 @@ class _$AppointmentImpl implements _Appointment {
             (identical(other.dayId, dayId) || other.dayId == dayId) &&
             (identical(other.patientId, patientId) ||
                 other.patientId == patientId) &&
+            (identical(other.startTime, startTime) ||
+                other.startTime == startTime) &&
+            (identical(other.closingTime, closingTime) ||
+                other.closingTime == closingTime) &&
             (identical(other.problemDetail, problemDetail) ||
                 other.problemDetail == problemDetail) &&
             (identical(other.healthRecordFile, healthRecordFile) ||
@@ -252,8 +292,17 @@ class _$AppointmentImpl implements _Appointment {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, serviceId, practitionerId,
-      dayId, patientId, problemDetail, healthRecordFile);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      serviceId,
+      practitionerId,
+      dayId,
+      patientId,
+      startTime,
+      closingTime,
+      problemDetail,
+      healthRecordFile);
 
   @JsonKey(ignore: true)
   @override
@@ -279,6 +328,10 @@ abstract class _Appointment implements Appointment {
       @JsonKey(name: "day_id", required: true) required final String dayId,
       @JsonKey(name: "patient_id", required: true)
       required final String patientId,
+      @JsonKey(name: "start_time", required: true)
+      required final String startTime,
+      @JsonKey(name: "closing_time", required: true)
+      required final String closingTime,
       @JsonKey(name: "problem_detail", required: true)
       required final String problemDetail,
       @JsonKey(
@@ -303,6 +356,12 @@ abstract class _Appointment implements Appointment {
   @override
   @JsonKey(name: "patient_id", required: true)
   String get patientId;
+  @override
+  @JsonKey(name: "start_time", required: true)
+  String get startTime;
+  @override
+  @JsonKey(name: "closing_time", required: true)
+  String get closingTime;
   @override
   @JsonKey(name: "problem_detail", required: true)
   String get problemDetail;

@@ -20,8 +20,16 @@ Day _$DayFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Day {
+  @JsonKey(name: "id", required: true)
+  String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: "practitioner_id", required: true)
+  String get practitionerId => throw _privateConstructorUsedError;
   @JsonKey(name: "day", required: true)
   String get day => throw _privateConstructorUsedError;
+  @JsonKey(name: "start_time", required: true)
+  String get startTime => throw _privateConstructorUsedError;
+  @JsonKey(name: "closing_time", required: true)
+  String get closingTime => throw _privateConstructorUsedError;
   @JsonKey(name: "booked", required: true, defaultValue: false)
   bool get booked => throw _privateConstructorUsedError;
 
@@ -36,7 +44,11 @@ abstract class $DayCopyWith<$Res> {
       _$DayCopyWithImpl<$Res, Day>;
   @useResult
   $Res call(
-      {@JsonKey(name: "day", required: true) String day,
+      {@JsonKey(name: "id", required: true) String id,
+      @JsonKey(name: "practitioner_id", required: true) String practitionerId,
+      @JsonKey(name: "day", required: true) String day,
+      @JsonKey(name: "start_time", required: true) String startTime,
+      @JsonKey(name: "closing_time", required: true) String closingTime,
       @JsonKey(name: "booked", required: true, defaultValue: false)
       bool booked});
 }
@@ -53,13 +65,33 @@ class _$DayCopyWithImpl<$Res, $Val extends Day> implements $DayCopyWith<$Res> {
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
+    Object? practitionerId = null,
     Object? day = null,
+    Object? startTime = null,
+    Object? closingTime = null,
     Object? booked = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      practitionerId: null == practitionerId
+          ? _value.practitionerId
+          : practitionerId // ignore: cast_nullable_to_non_nullable
+              as String,
       day: null == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
+              as String,
+      startTime: null == startTime
+          ? _value.startTime
+          : startTime // ignore: cast_nullable_to_non_nullable
+              as String,
+      closingTime: null == closingTime
+          ? _value.closingTime
+          : closingTime // ignore: cast_nullable_to_non_nullable
               as String,
       booked: null == booked
           ? _value.booked
@@ -76,7 +108,11 @@ abstract class _$$DayImplCopyWith<$Res> implements $DayCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "day", required: true) String day,
+      {@JsonKey(name: "id", required: true) String id,
+      @JsonKey(name: "practitioner_id", required: true) String practitionerId,
+      @JsonKey(name: "day", required: true) String day,
+      @JsonKey(name: "start_time", required: true) String startTime,
+      @JsonKey(name: "closing_time", required: true) String closingTime,
       @JsonKey(name: "booked", required: true, defaultValue: false)
       bool booked});
 }
@@ -90,13 +126,33 @@ class __$$DayImplCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res, _$DayImpl>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
+    Object? practitionerId = null,
     Object? day = null,
+    Object? startTime = null,
+    Object? closingTime = null,
     Object? booked = null,
   }) {
     return _then(_$DayImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      practitionerId: null == practitionerId
+          ? _value.practitionerId
+          : practitionerId // ignore: cast_nullable_to_non_nullable
+              as String,
       day: null == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
+              as String,
+      startTime: null == startTime
+          ? _value.startTime
+          : startTime // ignore: cast_nullable_to_non_nullable
+              as String,
+      closingTime: null == closingTime
+          ? _value.closingTime
+          : closingTime // ignore: cast_nullable_to_non_nullable
               as String,
       booked: null == booked
           ? _value.booked
@@ -110,7 +166,12 @@ class __$$DayImplCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res, _$DayImpl>
 @JsonSerializable()
 class _$DayImpl implements _Day {
   const _$DayImpl(
-      {@JsonKey(name: "day", required: true) required this.day,
+      {@JsonKey(name: "id", required: true) required this.id,
+      @JsonKey(name: "practitioner_id", required: true)
+      required this.practitionerId,
+      @JsonKey(name: "day", required: true) required this.day,
+      @JsonKey(name: "start_time", required: true) required this.startTime,
+      @JsonKey(name: "closing_time", required: true) required this.closingTime,
       @JsonKey(name: "booked", required: true, defaultValue: false)
       required this.booked});
 
@@ -118,15 +179,27 @@ class _$DayImpl implements _Day {
       _$$DayImplFromJson(json);
 
   @override
+  @JsonKey(name: "id", required: true)
+  final String id;
+  @override
+  @JsonKey(name: "practitioner_id", required: true)
+  final String practitionerId;
+  @override
   @JsonKey(name: "day", required: true)
   final String day;
+  @override
+  @JsonKey(name: "start_time", required: true)
+  final String startTime;
+  @override
+  @JsonKey(name: "closing_time", required: true)
+  final String closingTime;
   @override
   @JsonKey(name: "booked", required: true, defaultValue: false)
   final bool booked;
 
   @override
   String toString() {
-    return 'Day(day: $day, booked: $booked)';
+    return 'Day(id: $id, practitionerId: $practitionerId, day: $day, startTime: $startTime, closingTime: $closingTime, booked: $booked)';
   }
 
   @override
@@ -134,13 +207,21 @@ class _$DayImpl implements _Day {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DayImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.practitionerId, practitionerId) ||
+                other.practitionerId == practitionerId) &&
             (identical(other.day, day) || other.day == day) &&
+            (identical(other.startTime, startTime) ||
+                other.startTime == startTime) &&
+            (identical(other.closingTime, closingTime) ||
+                other.closingTime == closingTime) &&
             (identical(other.booked, booked) || other.booked == booked));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, day, booked);
+  int get hashCode => Object.hash(
+      runtimeType, id, practitionerId, day, startTime, closingTime, booked);
 
   @JsonKey(ignore: true)
   @override
@@ -158,15 +239,34 @@ class _$DayImpl implements _Day {
 
 abstract class _Day implements Day {
   const factory _Day(
-      {@JsonKey(name: "day", required: true) required final String day,
+      {@JsonKey(name: "id", required: true) required final String id,
+      @JsonKey(name: "practitioner_id", required: true)
+      required final String practitionerId,
+      @JsonKey(name: "day", required: true) required final String day,
+      @JsonKey(name: "start_time", required: true)
+      required final String startTime,
+      @JsonKey(name: "closing_time", required: true)
+      required final String closingTime,
       @JsonKey(name: "booked", required: true, defaultValue: false)
       required final bool booked}) = _$DayImpl;
 
   factory _Day.fromJson(Map<String, dynamic> json) = _$DayImpl.fromJson;
 
   @override
+  @JsonKey(name: "id", required: true)
+  String get id;
+  @override
+  @JsonKey(name: "practitioner_id", required: true)
+  String get practitionerId;
+  @override
   @JsonKey(name: "day", required: true)
   String get day;
+  @override
+  @JsonKey(name: "start_time", required: true)
+  String get startTime;
+  @override
+  @JsonKey(name: "closing_time", required: true)
+  String get closingTime;
   @override
   @JsonKey(name: "booked", required: true, defaultValue: false)
   bool get booked;

@@ -9,9 +9,10 @@ part of 'service.dart';
 _$ServiceImpl _$$ServiceImplFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['service_name', 'picture'],
+    requiredKeys: const ['id', 'service_name', 'picture'],
   );
   return _$ServiceImpl(
+    id: json['id'] as String,
     name: json['service_name'] as String,
     picture: json['picture'] as String,
     profilePicture: json['profilePicture'] as String,
@@ -20,6 +21,7 @@ _$ServiceImpl _$$ServiceImplFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$$ServiceImplToJson(_$ServiceImpl instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'service_name': instance.name,
       'picture': instance.picture,
       'profilePicture': instance.profilePicture,

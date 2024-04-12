@@ -20,20 +20,20 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Appointment {
+  @JsonKey(name: "id", required: true)
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: "service_id", required: true)
   String get serviceId => throw _privateConstructorUsedError;
-  @JsonKey(name: "doctor_id", required: true)
-  String get doctorId => throw _privateConstructorUsedError;
+  @JsonKey(name: "practitioner_id", required: true)
+  String get practitionerId => throw _privateConstructorUsedError;
+  @JsonKey(name: "day_id", required: true)
+  String get dayId => throw _privateConstructorUsedError;
   @JsonKey(name: "patient_id", required: true)
   String get patientId => throw _privateConstructorUsedError;
-  @JsonKey(name: "date", required: true)
-  DateTime get date => throw _privateConstructorUsedError;
-  @JsonKey(name: "time", required: true)
-  String get time => throw _privateConstructorUsedError;
   @JsonKey(name: "problem_detail", required: true)
   String get problemDetail => throw _privateConstructorUsedError;
   @JsonKey(name: "health_record_file", required: false, includeIfNull: false)
-  String get healthRecordFile => throw _privateConstructorUsedError;
+  String? get healthRecordFile => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,15 +48,15 @@ abstract class $AppointmentCopyWith<$Res> {
       _$AppointmentCopyWithImpl<$Res, Appointment>;
   @useResult
   $Res call(
-      {@JsonKey(name: "service_id", required: true) String serviceId,
-      @JsonKey(name: "doctor_id", required: true) String doctorId,
+      {@JsonKey(name: "id", required: true) String id,
+      @JsonKey(name: "service_id", required: true) String serviceId,
+      @JsonKey(name: "practitioner_id", required: true) String practitionerId,
+      @JsonKey(name: "day_id", required: true) String dayId,
       @JsonKey(name: "patient_id", required: true) String patientId,
-      @JsonKey(name: "date", required: true) DateTime date,
-      @JsonKey(name: "time", required: true) String time,
       @JsonKey(name: "problem_detail", required: true) String problemDetail,
       @JsonKey(
           name: "health_record_file", required: false, includeIfNull: false)
-      String healthRecordFile});
+      String? healthRecordFile});
 }
 
 /// @nodoc
@@ -72,43 +72,43 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? serviceId = null,
-    Object? doctorId = null,
+    Object? practitionerId = null,
+    Object? dayId = null,
     Object? patientId = null,
-    Object? date = null,
-    Object? time = null,
     Object? problemDetail = null,
-    Object? healthRecordFile = null,
+    Object? healthRecordFile = freezed,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       serviceId: null == serviceId
           ? _value.serviceId
           : serviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      doctorId: null == doctorId
-          ? _value.doctorId
-          : doctorId // ignore: cast_nullable_to_non_nullable
+      practitionerId: null == practitionerId
+          ? _value.practitionerId
+          : practitionerId // ignore: cast_nullable_to_non_nullable
+              as String,
+      dayId: null == dayId
+          ? _value.dayId
+          : dayId // ignore: cast_nullable_to_non_nullable
               as String,
       patientId: null == patientId
           ? _value.patientId
           : patientId // ignore: cast_nullable_to_non_nullable
               as String,
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      time: null == time
-          ? _value.time
-          : time // ignore: cast_nullable_to_non_nullable
-              as String,
       problemDetail: null == problemDetail
           ? _value.problemDetail
           : problemDetail // ignore: cast_nullable_to_non_nullable
               as String,
-      healthRecordFile: null == healthRecordFile
+      healthRecordFile: freezed == healthRecordFile
           ? _value.healthRecordFile
           : healthRecordFile // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -122,15 +122,15 @@ abstract class _$$AppointmentImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "service_id", required: true) String serviceId,
-      @JsonKey(name: "doctor_id", required: true) String doctorId,
+      {@JsonKey(name: "id", required: true) String id,
+      @JsonKey(name: "service_id", required: true) String serviceId,
+      @JsonKey(name: "practitioner_id", required: true) String practitionerId,
+      @JsonKey(name: "day_id", required: true) String dayId,
       @JsonKey(name: "patient_id", required: true) String patientId,
-      @JsonKey(name: "date", required: true) DateTime date,
-      @JsonKey(name: "time", required: true) String time,
       @JsonKey(name: "problem_detail", required: true) String problemDetail,
       @JsonKey(
           name: "health_record_file", required: false, includeIfNull: false)
-      String healthRecordFile});
+      String? healthRecordFile});
 }
 
 /// @nodoc
@@ -144,43 +144,43 @@ class __$$AppointmentImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? serviceId = null,
-    Object? doctorId = null,
+    Object? practitionerId = null,
+    Object? dayId = null,
     Object? patientId = null,
-    Object? date = null,
-    Object? time = null,
     Object? problemDetail = null,
-    Object? healthRecordFile = null,
+    Object? healthRecordFile = freezed,
   }) {
     return _then(_$AppointmentImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       serviceId: null == serviceId
           ? _value.serviceId
           : serviceId // ignore: cast_nullable_to_non_nullable
               as String,
-      doctorId: null == doctorId
-          ? _value.doctorId
-          : doctorId // ignore: cast_nullable_to_non_nullable
+      practitionerId: null == practitionerId
+          ? _value.practitionerId
+          : practitionerId // ignore: cast_nullable_to_non_nullable
+              as String,
+      dayId: null == dayId
+          ? _value.dayId
+          : dayId // ignore: cast_nullable_to_non_nullable
               as String,
       patientId: null == patientId
           ? _value.patientId
           : patientId // ignore: cast_nullable_to_non_nullable
               as String,
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      time: null == time
-          ? _value.time
-          : time // ignore: cast_nullable_to_non_nullable
-              as String,
       problemDetail: null == problemDetail
           ? _value.problemDetail
           : problemDetail // ignore: cast_nullable_to_non_nullable
               as String,
-      healthRecordFile: null == healthRecordFile
+      healthRecordFile: freezed == healthRecordFile
           ? _value.healthRecordFile
           : healthRecordFile // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -189,45 +189,46 @@ class __$$AppointmentImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AppointmentImpl implements _Appointment {
   const _$AppointmentImpl(
-      {@JsonKey(name: "service_id", required: true) required this.serviceId,
-      @JsonKey(name: "doctor_id", required: true) required this.doctorId,
+      {@JsonKey(name: "id", required: true) required this.id,
+      @JsonKey(name: "service_id", required: true) required this.serviceId,
+      @JsonKey(name: "practitioner_id", required: true)
+      required this.practitionerId,
+      @JsonKey(name: "day_id", required: true) required this.dayId,
       @JsonKey(name: "patient_id", required: true) required this.patientId,
-      @JsonKey(name: "date", required: true) required this.date,
-      @JsonKey(name: "time", required: true) required this.time,
       @JsonKey(name: "problem_detail", required: true)
       required this.problemDetail,
       @JsonKey(
           name: "health_record_file", required: false, includeIfNull: false)
-      required this.healthRecordFile});
+      this.healthRecordFile});
 
   factory _$AppointmentImpl.fromJson(Map<String, dynamic> json) =>
       _$$AppointmentImplFromJson(json);
 
   @override
+  @JsonKey(name: "id", required: true)
+  final String id;
+  @override
   @JsonKey(name: "service_id", required: true)
   final String serviceId;
   @override
-  @JsonKey(name: "doctor_id", required: true)
-  final String doctorId;
+  @JsonKey(name: "practitioner_id", required: true)
+  final String practitionerId;
+  @override
+  @JsonKey(name: "day_id", required: true)
+  final String dayId;
   @override
   @JsonKey(name: "patient_id", required: true)
   final String patientId;
-  @override
-  @JsonKey(name: "date", required: true)
-  final DateTime date;
-  @override
-  @JsonKey(name: "time", required: true)
-  final String time;
   @override
   @JsonKey(name: "problem_detail", required: true)
   final String problemDetail;
   @override
   @JsonKey(name: "health_record_file", required: false, includeIfNull: false)
-  final String healthRecordFile;
+  final String? healthRecordFile;
 
   @override
   String toString() {
-    return 'Appointment(serviceId: $serviceId, doctorId: $doctorId, patientId: $patientId, date: $date, time: $time, problemDetail: $problemDetail, healthRecordFile: $healthRecordFile)';
+    return 'Appointment(id: $id, serviceId: $serviceId, practitionerId: $practitionerId, dayId: $dayId, patientId: $patientId, problemDetail: $problemDetail, healthRecordFile: $healthRecordFile)';
   }
 
   @override
@@ -235,14 +236,14 @@ class _$AppointmentImpl implements _Appointment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppointmentImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.serviceId, serviceId) ||
                 other.serviceId == serviceId) &&
-            (identical(other.doctorId, doctorId) ||
-                other.doctorId == doctorId) &&
+            (identical(other.practitionerId, practitionerId) ||
+                other.practitionerId == practitionerId) &&
+            (identical(other.dayId, dayId) || other.dayId == dayId) &&
             (identical(other.patientId, patientId) ||
                 other.patientId == patientId) &&
-            (identical(other.date, date) || other.date == date) &&
-            (identical(other.time, time) || other.time == time) &&
             (identical(other.problemDetail, problemDetail) ||
                 other.problemDetail == problemDetail) &&
             (identical(other.healthRecordFile, healthRecordFile) ||
@@ -251,8 +252,8 @@ class _$AppointmentImpl implements _Appointment {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, serviceId, doctorId, patientId,
-      date, time, problemDetail, healthRecordFile);
+  int get hashCode => Object.hash(runtimeType, id, serviceId, practitionerId,
+      dayId, patientId, problemDetail, healthRecordFile);
 
   @JsonKey(ignore: true)
   @override
@@ -270,44 +271,44 @@ class _$AppointmentImpl implements _Appointment {
 
 abstract class _Appointment implements Appointment {
   const factory _Appointment(
-      {@JsonKey(name: "service_id", required: true)
+      {@JsonKey(name: "id", required: true) required final String id,
+      @JsonKey(name: "service_id", required: true)
       required final String serviceId,
-      @JsonKey(name: "doctor_id", required: true)
-      required final String doctorId,
+      @JsonKey(name: "practitioner_id", required: true)
+      required final String practitionerId,
+      @JsonKey(name: "day_id", required: true) required final String dayId,
       @JsonKey(name: "patient_id", required: true)
       required final String patientId,
-      @JsonKey(name: "date", required: true) required final DateTime date,
-      @JsonKey(name: "time", required: true) required final String time,
       @JsonKey(name: "problem_detail", required: true)
       required final String problemDetail,
       @JsonKey(
           name: "health_record_file", required: false, includeIfNull: false)
-      required final String healthRecordFile}) = _$AppointmentImpl;
+      final String? healthRecordFile}) = _$AppointmentImpl;
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$AppointmentImpl.fromJson;
 
   @override
+  @JsonKey(name: "id", required: true)
+  String get id;
+  @override
   @JsonKey(name: "service_id", required: true)
   String get serviceId;
   @override
-  @JsonKey(name: "doctor_id", required: true)
-  String get doctorId;
+  @JsonKey(name: "practitioner_id", required: true)
+  String get practitionerId;
+  @override
+  @JsonKey(name: "day_id", required: true)
+  String get dayId;
   @override
   @JsonKey(name: "patient_id", required: true)
   String get patientId;
-  @override
-  @JsonKey(name: "date", required: true)
-  DateTime get date;
-  @override
-  @JsonKey(name: "time", required: true)
-  String get time;
   @override
   @JsonKey(name: "problem_detail", required: true)
   String get problemDetail;
   @override
   @JsonKey(name: "health_record_file", required: false, includeIfNull: false)
-  String get healthRecordFile;
+  String? get healthRecordFile;
   @override
   @JsonKey(ignore: true)
   _$$AppointmentImplCopyWith<_$AppointmentImpl> get copyWith =>

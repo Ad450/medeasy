@@ -10,6 +10,7 @@ _$PractitionerImpl _$$PractitionerImplFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
     requiredKeys: const [
+      'id',
       'first_name',
       'lastname_name',
       'age',
@@ -20,6 +21,7 @@ _$PractitionerImpl _$$PractitionerImplFromJson(Map<String, dynamic> json) {
     ],
   );
   return _$PractitionerImpl(
+    id: json['id'] as String,
     firstName: json['first_name'] as String,
     lastName: json['lastname_name'] as String,
     age: json['age'] as int,
@@ -32,6 +34,7 @@ _$PractitionerImpl _$$PractitionerImplFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$$PractitionerImplToJson(_$PractitionerImpl instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'first_name': instance.firstName,
       'lastname_name': instance.lastName,
       'age': instance.age,

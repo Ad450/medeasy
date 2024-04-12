@@ -20,6 +20,8 @@ Service _$ServiceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Service {
+  @JsonKey(name: "id", required: true)
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: "service_name", required: true)
   String get name => throw _privateConstructorUsedError;
   @JsonKey(name: "picture", required: true)
@@ -37,7 +39,8 @@ abstract class $ServiceCopyWith<$Res> {
       _$ServiceCopyWithImpl<$Res, Service>;
   @useResult
   $Res call(
-      {@JsonKey(name: "service_name", required: true) String name,
+      {@JsonKey(name: "id", required: true) String id,
+      @JsonKey(name: "service_name", required: true) String name,
       @JsonKey(name: "picture", required: true) String picture,
       String profilePicture});
 }
@@ -55,11 +58,16 @@ class _$ServiceCopyWithImpl<$Res, $Val extends Service>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? picture = null,
     Object? profilePicture = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -84,7 +92,8 @@ abstract class _$$ServiceImplCopyWith<$Res> implements $ServiceCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "service_name", required: true) String name,
+      {@JsonKey(name: "id", required: true) String id,
+      @JsonKey(name: "service_name", required: true) String name,
       @JsonKey(name: "picture", required: true) String picture,
       String profilePicture});
 }
@@ -100,11 +109,16 @@ class __$$ServiceImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? picture = null,
     Object? profilePicture = null,
   }) {
     return _then(_$ServiceImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -125,13 +139,17 @@ class __$$ServiceImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ServiceImpl implements _Service {
   const _$ServiceImpl(
-      {@JsonKey(name: "service_name", required: true) required this.name,
+      {@JsonKey(name: "id", required: true) required this.id,
+      @JsonKey(name: "service_name", required: true) required this.name,
       @JsonKey(name: "picture", required: true) required this.picture,
       required this.profilePicture});
 
   factory _$ServiceImpl.fromJson(Map<String, dynamic> json) =>
       _$$ServiceImplFromJson(json);
 
+  @override
+  @JsonKey(name: "id", required: true)
+  final String id;
   @override
   @JsonKey(name: "service_name", required: true)
   final String name;
@@ -143,7 +161,7 @@ class _$ServiceImpl implements _Service {
 
   @override
   String toString() {
-    return 'Service(name: $name, picture: $picture, profilePicture: $profilePicture)';
+    return 'Service(id: $id, name: $name, picture: $picture, profilePicture: $profilePicture)';
   }
 
   @override
@@ -151,6 +169,7 @@ class _$ServiceImpl implements _Service {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ServiceImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.picture, picture) || other.picture == picture) &&
             (identical(other.profilePicture, profilePicture) ||
@@ -159,7 +178,8 @@ class _$ServiceImpl implements _Service {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, picture, profilePicture);
+  int get hashCode =>
+      Object.hash(runtimeType, id, name, picture, profilePicture);
 
   @JsonKey(ignore: true)
   @override
@@ -177,13 +197,16 @@ class _$ServiceImpl implements _Service {
 
 abstract class _Service implements Service {
   const factory _Service(
-      {@JsonKey(name: "service_name", required: true)
-      required final String name,
+      {@JsonKey(name: "id", required: true) required final String id,
+      @JsonKey(name: "service_name", required: true) required final String name,
       @JsonKey(name: "picture", required: true) required final String picture,
       required final String profilePicture}) = _$ServiceImpl;
 
   factory _Service.fromJson(Map<String, dynamic> json) = _$ServiceImpl.fromJson;
 
+  @override
+  @JsonKey(name: "id", required: true)
+  String get id;
   @override
   @JsonKey(name: "service_name", required: true)
   String get name;

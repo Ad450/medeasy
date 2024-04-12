@@ -20,6 +20,8 @@ Practitioner _$PractitionerFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Practitioner {
+  @JsonKey(name: "id", required: true)
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: "first_name", required: true)
   String get firstName => throw _privateConstructorUsedError;
   @JsonKey(name: "lastname_name", required: true)
@@ -48,7 +50,8 @@ abstract class $PractitionerCopyWith<$Res> {
       _$PractitionerCopyWithImpl<$Res, Practitioner>;
   @useResult
   $Res call(
-      {@JsonKey(name: "first_name", required: true) String firstName,
+      {@JsonKey(name: "id", required: true) String id,
+      @JsonKey(name: "first_name", required: true) String firstName,
       @JsonKey(name: "lastname_name", required: true) String lastName,
       @JsonKey(name: "age", required: true) int age,
       @JsonKey(name: "profile_picture", required: true) String profilePicture,
@@ -70,6 +73,7 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? firstName = null,
     Object? lastName = null,
     Object? age = null,
@@ -79,6 +83,10 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
     Object? bio = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -120,7 +128,8 @@ abstract class _$$PractitionerImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "first_name", required: true) String firstName,
+      {@JsonKey(name: "id", required: true) String id,
+      @JsonKey(name: "first_name", required: true) String firstName,
       @JsonKey(name: "lastname_name", required: true) String lastName,
       @JsonKey(name: "age", required: true) int age,
       @JsonKey(name: "profile_picture", required: true) String profilePicture,
@@ -140,6 +149,7 @@ class __$$PractitionerImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? firstName = null,
     Object? lastName = null,
     Object? age = null,
@@ -149,6 +159,10 @@ class __$$PractitionerImplCopyWithImpl<$Res>
     Object? bio = null,
   }) {
     return _then(_$PractitionerImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -185,7 +199,8 @@ class __$$PractitionerImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PractitionerImpl implements _Practitioner {
   const _$PractitionerImpl(
-      {@JsonKey(name: "first_name", required: true) required this.firstName,
+      {@JsonKey(name: "id", required: true) required this.id,
+      @JsonKey(name: "first_name", required: true) required this.firstName,
       @JsonKey(name: "lastname_name", required: true) required this.lastName,
       @JsonKey(name: "age", required: true) required this.age,
       @JsonKey(name: "profile_picture", required: true)
@@ -197,6 +212,9 @@ class _$PractitionerImpl implements _Practitioner {
   factory _$PractitionerImpl.fromJson(Map<String, dynamic> json) =>
       _$$PractitionerImplFromJson(json);
 
+  @override
+  @JsonKey(name: "id", required: true)
+  final String id;
   @override
   @JsonKey(name: "first_name", required: true)
   final String firstName;
@@ -221,7 +239,7 @@ class _$PractitionerImpl implements _Practitioner {
 
   @override
   String toString() {
-    return 'Practitioner(firstName: $firstName, lastName: $lastName, age: $age, profilePicture: $profilePicture, kycStatus: $kycStatus, specialty: $specialty, bio: $bio)';
+    return 'Practitioner(id: $id, firstName: $firstName, lastName: $lastName, age: $age, profilePicture: $profilePicture, kycStatus: $kycStatus, specialty: $specialty, bio: $bio)';
   }
 
   @override
@@ -229,6 +247,7 @@ class _$PractitionerImpl implements _Practitioner {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PractitionerImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
             (identical(other.lastName, lastName) ||
@@ -245,7 +264,7 @@ class _$PractitionerImpl implements _Practitioner {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, firstName, lastName, age,
+  int get hashCode => Object.hash(runtimeType, id, firstName, lastName, age,
       profilePicture, kycStatus, specialty, bio);
 
   @JsonKey(ignore: true)
@@ -264,7 +283,8 @@ class _$PractitionerImpl implements _Practitioner {
 
 abstract class _Practitioner implements Practitioner {
   const factory _Practitioner(
-          {@JsonKey(name: "first_name", required: true)
+          {@JsonKey(name: "id", required: true) required final String id,
+          @JsonKey(name: "first_name", required: true)
           required final String firstName,
           @JsonKey(name: "lastname_name", required: true)
           required final String lastName,
@@ -281,6 +301,9 @@ abstract class _Practitioner implements Practitioner {
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
       _$PractitionerImpl.fromJson;
 
+  @override
+  @JsonKey(name: "id", required: true)
+  String get id;
   @override
   @JsonKey(name: "first_name", required: true)
   String get firstName;

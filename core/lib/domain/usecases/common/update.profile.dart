@@ -9,7 +9,7 @@ class UpdateProfile implements Usecase<VoidType, UpdateProfileParams> {
   @override
   Future<Either<MedeasyError, VoidType>> call(UpdateProfileParams param) async {
     try {
-      return Right(await _commonRepository.updateProfile(param.toJson()));
+      return Right(await _commonRepository.updateProfile(param));
     } catch (e) {
       return Left(MedeasyError.fromApiError((e as ApiError).message));
     }
@@ -38,21 +38,15 @@ class UpdateProfileParams {
   Map<String, Object?> toJson() {
     return isPractitioner
         ? <String, Object?>{
-            "data": {
-              "last_name": lastName,
-              "age": age,
-              "profile_picture": profilePicture,
-              "specialty": specialty,
-            },
-            "id": id,
+            "last_name": lastName,
+            "age": age,
+            "profile_picture": profilePicture,
+            "specialty": specialty,
           }
         : <String, Object?>{
-            "data": {
-              "last_name": lastName,
-              "age": age,
-              "profile_picture": profilePicture,
-            },
-            "id": id,
+            "last_name": lastName,
+            "age": age,
+            "profile_picture": profilePicture,
           };
   }
 }

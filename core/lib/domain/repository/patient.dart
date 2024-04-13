@@ -1,4 +1,5 @@
 import 'package:core/models/common/appointment.dart';
+import 'package:core/models/common/day.dart';
 import 'package:core/storage/firestore/firestore.storage.dart';
 import 'package:core/utils/errors.dart';
 import 'package:core/utils/typedefs.dart';
@@ -40,18 +41,22 @@ class PatientRepositoryImpl implements PatientRepository {
     required String closingTime,
   }) async {
     try {
-      await _firestoreStorage.add(
-        collection: Collection.appointments,
-        data: Appointment.create(
-          serviceId: serviceId,
-          practitionerId: practitionerId,
-          dayId: dayId,
-          patientId: patientId,
-          problemDetail: problemDetail,
-          closingTime: closingTime,
-          startTime: startTime,
-        ),
-      );
+      final storedDay = await _firestoreStorage.getByIdFuture(id: dayId, collection: Collection.day);
+      final isBooked = Day.fromJson(storedDay.data() as Map<String, Object?>).booked;
+      if (!isBooked) {
+        await _firestoreStorage.add(
+          collection: Collection.appointments,
+          data: Appointment.create(
+            serviceId: serviceId,
+            practitionerId: practitionerId,
+            dayId: dayId,
+            patientId: patientId,
+            problemDetail: problemDetail,
+            closingTime: closingTime,
+            startTime: startTime,
+          ),
+        );
+      }
       return const VoidType();
     } catch (e) {
       throw ApiError(e.toString(), stackTrace: "scheduleAppointment");
@@ -70,27 +75,17 @@ class PatientRepositoryImpl implements PatientRepository {
       final doc = await _firestoreStorage.getByIdFuture(id: appointmentId, collection: Collection.appointments);
       var oldAppointment = Appointment.fromJson(doc.data() as Map<String, Object?>);
 
-      if (dayId == null) {
-        await _firestoreStorage.update(
-          id: appointmentId,
-          collection: Collection.appointments,
-          data: {"problem_detail": problemDetail, "start_time": startTime, "closing_time": closingTime},
-        );
-      } else {
-        await _firestoreStorage.add(
-          collection: Collection.appointments,
-          data: Appointment.create(
-            serviceId: oldAppointment.serviceId,
-            practitionerId: oldAppointment.practitionerId,
-            dayId: dayId,
-            patientId: oldAppointment.patientId,
-            problemDetail: problemDetail ?? oldAppointment.problemDetail,
-            closingTime: closingTime ?? oldAppointment.closingTime,
-            startTime: startTime ?? oldAppointment.startTime,
-          ),
-        );
-        await _firestoreStorage.delete(id: oldAppointment.id, collection: Collection.appointments);
-      }
+      await _firestoreStorage.update(
+        id: appointmentId,
+        collection: Collection.appointments,
+        data: {
+          "problem_detail": problemDetail,
+          "start_time": startTime,
+          "closing_time": closingTime,
+          "day_id": dayId ?? oldAppointment.dayId,
+        },
+      );
+
       return const VoidType();
     } catch (e) {
       throw ApiError(e.toString(), stackTrace: "updateAppointment");

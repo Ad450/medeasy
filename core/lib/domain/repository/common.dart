@@ -1,3 +1,4 @@
+import 'package:core/core.dart';
 import 'package:core/models/common/appointment.dart';
 import 'package:core/storage/firestore/firestore.storage.dart';
 import 'package:core/storage/local/local.storage.dart';
@@ -11,7 +12,7 @@ sealed class CommonRepository {
   Future<VoidType> signupWithFacebook();
 
   Stream<List<Appointment>> fetchAllAppointments(FetchAppointmentType type);
-  Future<VoidType> updateProfile(Map<String, dynamic> data);
+  Future<VoidType> updateProfile(UpdateProfileParams params);
 }
 
 class CommonRepositoryImpl implements CommonRepository {
@@ -56,9 +57,14 @@ class CommonRepositoryImpl implements CommonRepository {
   }
 
   @override
-  Future<VoidType> updateProfile(Map<String, dynamic> data) async {
+  Future<VoidType> updateProfile(UpdateProfileParams params) async {
     try {
-      await _firestoreStorage.update(id: data['id'], collection: Collection.patients, data: data['data']);
+      final id = _localStorage.getString(LocalKeys.id.name);
+      await _firestoreStorage.update(
+        id: id,
+        collection: params.isPractitioner ? Collection.practitioners : Collection.patients,
+        data: params.toJson(),
+      );
       return const VoidType();
     } catch (e) {
       throw ApiError(e.toString(), source: "updateProfile");

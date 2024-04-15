@@ -9,7 +9,13 @@ class SignupWithEmailAndPassword implements Usecase<VoidType, SignupWithEmailAnd
   @override
   Future<Either<MedeasyError, VoidType>> call(SignupWithEmailAndPasswordParam param) async {
     try {
-      return Right(await _commonRepository.signupWithEmailAndPassword(email: param.email, password: param.password));
+      return Right(
+        await _commonRepository.signupWithEmailAndPassword(
+          email: param.email,
+          password: param.password,
+          type: param.type,
+        ),
+      );
     } catch (e) {
       return Left(MedeasyError.fromApiError((e as ApiError).message));
     }
@@ -19,8 +25,13 @@ class SignupWithEmailAndPassword implements Usecase<VoidType, SignupWithEmailAnd
 sealed class SignupWithEmailAndPasswordParam {
   final String email;
   final String password;
-  SignupWithEmailAndPasswordParam({required this.email, required String rawPassword})
-      : assert(rawPassword.length > 8),
+  final UserType type;
+
+  SignupWithEmailAndPasswordParam({
+    required this.email,
+    required String rawPassword,
+    required this.type,
+  })  : assert(rawPassword.length > 8),
         password = _hashPassword(rawPassword);
 
   static String _hashPassword(String password) => password.hashCode.toString();

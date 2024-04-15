@@ -2,7 +2,7 @@ import 'package:core/core.dart';
 import 'package:core/utils/errors.dart';
 import 'package:dartz/dartz.dart';
 
-enum FetchAppointmentType { practitioner, patient }
+enum UserType { practitioner, patient }
 
 class VoidType {
   const VoidType();

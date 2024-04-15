@@ -19,7 +19,7 @@ class FetchAllAppointments implements Usecase<Stream<List<Appointment>>, FetchAl
 
 sealed class FetchAllAppointmentsParam {
   final String id;
-  final FetchAppointmentType type;
+  final UserType type;
   FetchAllAppointmentsParam({
     required this.id,
     required this.type,

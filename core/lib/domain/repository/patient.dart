@@ -56,6 +56,8 @@ class PatientRepositoryImpl implements PatientRepository {
             startTime: startTime,
           ),
         );
+      } else {
+        throw ApiError('Your chosen Day is fully booked, try a different day');
       }
       return const VoidType();
     } catch (e) {

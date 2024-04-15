@@ -20,6 +20,7 @@ dependencies:
   json_annotation: ^4.8.1
   shared_preferences: ^2.2.3
   get_it: ^7.6.9
+  google_sign_in: ^6.2.1
 
 dev_dependencies:
   flutter_test:

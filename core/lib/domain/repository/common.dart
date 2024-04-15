@@ -1,15 +1,14 @@
-import 'dart:ffi';
-
-import 'package:core/core.dart';
 import 'package:core/domain/usecases/common/update.profile.dart';
 import 'package:core/models/common/appointment.dart';
 import 'package:core/models/patient/patient.dart';
+import 'package:core/models/practitioner/practitioner.dart';
 import 'package:core/storage/firestore/cloud.dart';
 import 'package:core/storage/firestore/firestore.storage.dart';
 import 'package:core/storage/local/local.storage.dart';
 import 'package:core/utils/errors.dart';
 import 'package:core/utils/typedefs.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 sealed class CommonRepository {
   Future<VoidType> signupWithEmailAndPassword({
@@ -18,7 +17,7 @@ sealed class CommonRepository {
     required UserType type,
   });
 
-  Future<VoidType> signupWithGoogle();
+  Future<VoidType> signupWithGoogle(UserType tpye);
   Future<VoidType> signupWithFacebook();
 
   Stream<List<Appointment>> fetchAllAppointments(UserType type);
@@ -59,30 +58,11 @@ class CommonRepositoryImpl implements CommonRepository {
     required UserType type,
   }) async {
     try {
-      final credential = await _getInstance().createUserWithEmailAndPassword(
+      final userCred = await _getInstance().createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
-      if (credential.user?.uid != null) {
-        var data = type == UserType.patient
-            ? Patient.create(firstName: "", lastName: "", age: 0, profilePicture: "").toJson()
-            : Practitioner.create(
-                firstName: "",
-                lastName: "",
-                age: 0,
-                profilePicture: "",
-                kycStatus: false,
-                specialty: "",
-                bio: "",
-              ).toJson();
-        await _firestoreStorage.add(
-          collection: type == UserType.patient ? Collection.patients : Collection.practitioners,
-          data: data,
-        );
-        return const VoidType();
-      } else {
-        throw ApiError("could not sign up - operation incomplete", source: "signupWithEmailAndPassword");
-      }
+      return _createUser(type, userCred);
     } on FirebaseAuthException catch (e) {
       throw ApiError(e.message ?? e.code, source: e.code);
     } catch (e) {
@@ -97,9 +77,22 @@ class CommonRepositoryImpl implements CommonRepository {
   }
 
   @override
-  Future<VoidType> signupWithGoogle() {
-    // TODO: implement signupWithGoogle
-    throw UnimplementedError();
+  Future<VoidType> signupWithGoogle(UserType type) async {
+    try {
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+      final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      final userCred = await FirebaseAuth.instance.signInWithCredential(credential);
+      return await _createUser(type, userCred);
+    } catch (e) {
+      throw ApiError(e.toString(), source: "signupWithGoogle");
+    }
   }
 
   @override
@@ -134,6 +127,29 @@ class CommonRepositoryImpl implements CommonRepository {
       );
     } catch (e) {
       throw ApiError(e.toString(), source: "fetchProfile");
+    }
+  }
+
+  Future<VoidType> _createUser(UserType type, UserCredential userCred) async {
+    if (userCred.user?.uid != null) {
+      var data = type == UserType.patient
+          ? Patient.create(firstName: "", lastName: "", age: 0, profilePicture: "").toJson()
+          : Practitioner.create(
+              firstName: "",
+              lastName: "",
+              age: 0,
+              profilePicture: "",
+              kycStatus: false,
+              specialty: "",
+              bio: "",
+            ).toJson();
+      await _firestoreStorage.add(
+        collection: type == UserType.patient ? Collection.patients : Collection.practitioners,
+        data: data,
+      );
+      return const VoidType();
+    } else {
+      throw ApiError("could not sign up - operation incomplete", source: "signupGoogle");
     }
   }
 }

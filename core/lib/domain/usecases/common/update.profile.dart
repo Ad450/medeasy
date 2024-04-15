@@ -17,7 +17,6 @@ class UpdateProfile implements Usecase<VoidType, UpdateProfileParams> {
 }
 
 class UpdateProfileParams {
-  final String id;
   final String? firstName;
   final String? lastName;
   final String? age;
@@ -26,7 +25,6 @@ class UpdateProfileParams {
   final String? specialty;
 
   UpdateProfileParams({
-    required this.id,
     this.firstName,
     this.lastName,
     this.age,

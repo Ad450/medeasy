@@ -2,7 +2,7 @@ import 'package:core/domain/repository/common.dart';
 import 'package:core/domain/repository/patient.dart';
 import 'package:core/domain/repository/practitioner.dart';
 import 'package:core/domain/usecases/common/fetch.all.appointments.dart';
-import 'package:core/domain/usecases/common/fetch.profile.dart';
+import 'package:core/domain/usecases/patient/fetch.patient.profile.dart';
 import 'package:core/domain/usecases/common/signup.with.email.password.dart';
 import 'package:core/domain/usecases/common/signup.with.facebook.dart';
 import 'package:core/domain/usecases/common/signup.with.google.dart';
@@ -29,10 +29,10 @@ void setupLocator() {
   );
 
   locator.registerLazySingleton<PatientRepository>(
-    () => PatientRepositoryImpl(locator.get<FirestoreStorage>()),
+    () => PatientRepositoryImpl(locator.get<FirestoreStorage>(), locator.get<LocalStorage>()),
   );
   locator.registerLazySingleton<PractitionerRepository>(
-    () => PractitionerRepositoryImpl(locator.get<FirestoreStorage>()),
+    () => PractitionerRepositoryImpl(locator.get<FirestoreStorage>(), locator.get<LocalStorage>()),
   );
   locator.registerLazySingleton<FetchAllAppointments>(
     () => FetchAllAppointments(locator.get<CommonRepository>()),
@@ -53,8 +53,8 @@ void setupLocator() {
     () => UpdateProfile(locator.get<CommonRepository>()),
   );
 
-  locator.registerLazySingleton<FetchProfile>(
-    () => FetchProfile(locator.get<CommonRepository>()),
+  locator.registerLazySingleton<FetchPatientProfile>(
+    () => FetchPatientProfile(locator.get<PatientRepository>()),
   );
 
   locator.registerLazySingleton<ScheduleAppointment>(

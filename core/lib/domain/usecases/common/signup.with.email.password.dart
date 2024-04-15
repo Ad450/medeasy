@@ -22,7 +22,7 @@ class SignupWithEmailAndPassword implements Usecase<VoidType, SignupWithEmailAnd
   }
 }
 
-sealed class SignupWithEmailAndPasswordParam {
+class SignupWithEmailAndPasswordParam {
   final String email;
   final String password;
   final UserType type;

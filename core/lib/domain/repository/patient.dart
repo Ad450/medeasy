@@ -1,6 +1,8 @@
 import 'package:core/models/common/appointment.dart';
 import 'package:core/models/common/day.dart';
+import 'package:core/models/patient/patient.dart';
 import 'package:core/storage/firestore/firestore.storage.dart';
+import 'package:core/storage/local/local.storage.dart';
 import 'package:core/utils/errors.dart';
 import 'package:core/utils/typedefs.dart';
 
@@ -22,12 +24,27 @@ sealed class PatientRepository {
     String? problemDetail,
     required String appointmentId,
   });
+  Stream<Patient> fetchProfile();
 }
 
 class PatientRepositoryImpl implements PatientRepository {
   final FirestoreStorage _firestoreStorage;
+  final LocalStorage _localStorage;
 
-  PatientRepositoryImpl(this._firestoreStorage);
+  PatientRepositoryImpl(this._firestoreStorage, this._localStorage);
+
+  @override
+  Stream<Patient> fetchProfile() {
+    try {
+      final id = _localStorage.getString(LocalKeys.id.name);
+      var snapshot = _firestoreStorage.getByKeyValueStream(key: "id", value: id, collection: Collection.patients);
+      return snapshot.map(
+        (e) => e.docs.map((doc) => Patient.fromJson(doc.data() as Map<String, Object?>)).toList().first,
+      );
+    } catch (e) {
+      throw ApiError(e.toString(), source: "fetchPatientProfile");
+    }
+  }
 
   @override
   Future<VoidType> scheduleAppointment({

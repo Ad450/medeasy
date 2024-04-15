@@ -22,7 +22,6 @@ sealed class CommonRepository {
 
   Stream<List<Appointment>> fetchAllAppointments(UserType type);
   Future<VoidType> updateProfile(UpdateProfileParams params);
-  Stream<Patient> fetchProfile();
 }
 
 class CommonRepositoryImpl implements CommonRepository {
@@ -114,19 +113,6 @@ class CommonRepositoryImpl implements CommonRepository {
       return const VoidType();
     } catch (e) {
       throw ApiError(e.toString(), source: "updateProfile");
-    }
-  }
-
-  @override
-  Stream<Patient> fetchProfile() {
-    try {
-      final id = _localStorage.getString(LocalKeys.id.name);
-      var snapshot = _firestoreStorage.getByKeyValueStream(key: "id", value: id, collection: Collection.patients);
-      return snapshot.map(
-        (e) => e.docs.map((doc) => Patient.fromJson(doc.data() as Map<String, Object?>)).toList().first,
-      );
-    } catch (e) {
-      throw ApiError(e.toString(), source: "fetchProfile");
     }
   }
 

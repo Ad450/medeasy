@@ -23,13 +23,6 @@ mixin _$CommonState {
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -48,13 +41,6 @@ mixin _$CommonState {
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -73,13 +59,6 @@ mixin _$CommonState {
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -101,18 +80,6 @@ mixin _$CommonState {
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -144,18 +111,6 @@ mixin _$CommonState {
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -184,18 +139,6 @@ mixin _$CommonState {
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -279,13 +222,6 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -307,13 +243,6 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -335,13 +264,6 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -369,18 +291,6 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -415,18 +325,6 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -458,18 +356,6 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -548,13 +434,6 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -576,13 +455,6 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -604,13 +476,6 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -638,18 +503,6 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -684,18 +537,6 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -727,18 +568,6 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -845,13 +674,6 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -873,13 +695,6 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -901,13 +716,6 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -935,18 +743,6 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -981,18 +777,6 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -1024,18 +808,6 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -1158,13 +930,6 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -1186,13 +951,6 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -1214,13 +972,6 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -1248,18 +999,6 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -1294,18 +1033,6 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -1337,18 +1064,6 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -1384,1788 +1099,6 @@ abstract class _CommonStateFetchAllAppointmentsSuccess implements CommonState {
   @JsonKey(ignore: true)
   _$$CommonStateFetchAllAppointmentsSuccessImplCopyWith<
           _$CommonStateFetchAllAppointmentsSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CommonStateFetchPractitionerProfileLoadingImplCopyWith<$Res> {
-  factory _$$CommonStateFetchPractitionerProfileLoadingImplCopyWith(
-          _$CommonStateFetchPractitionerProfileLoadingImpl value,
-          $Res Function(_$CommonStateFetchPractitionerProfileLoadingImpl)
-              then) =
-      __$$CommonStateFetchPractitionerProfileLoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$CommonStateFetchPractitionerProfileLoadingImplCopyWithImpl<$Res>
-    extends _$CommonStateCopyWithImpl<$Res,
-        _$CommonStateFetchPractitionerProfileLoadingImpl>
-    implements _$$CommonStateFetchPractitionerProfileLoadingImplCopyWith<$Res> {
-  __$$CommonStateFetchPractitionerProfileLoadingImplCopyWithImpl(
-      _$CommonStateFetchPractitionerProfileLoadingImpl _value,
-      $Res Function(_$CommonStateFetchPractitionerProfileLoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$CommonStateFetchPractitionerProfileLoadingImpl
-    implements _CommonStateFetchPractitionerProfileLoading {
-  _$CommonStateFetchPractitionerProfileLoadingImpl();
-
-  @override
-  String toString() {
-    return 'CommonState.fetchPractitionerProfileLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommonStateFetchPractitionerProfileLoadingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchAllAppointmentsLoading,
-    required TResult Function(String message) fetchAllAppointmentsError,
-    required TResult Function(Set<Appointment> appointments)
-        fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
-    required TResult Function() signupWithEmailAndPasswordLoading,
-    required TResult Function(String message) signupWithEmailAndPasswordError,
-    required TResult Function() signupWithEmailAndPasswordSuccess,
-    required TResult Function() signupWithGoogleLoading,
-    required TResult Function(String message) signupWithGoogleError,
-    required TResult Function() signupWithGoogleSuccess,
-    required TResult Function() updateProfileLoading,
-    required TResult Function(String message) updateProfileError,
-    required TResult Function() updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchAllAppointmentsLoading,
-    TResult? Function(String message)? fetchAllAppointmentsError,
-    TResult? Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult? Function()? signupWithEmailAndPasswordLoading,
-    TResult? Function(String message)? signupWithEmailAndPasswordError,
-    TResult? Function()? signupWithEmailAndPasswordSuccess,
-    TResult? Function()? signupWithGoogleLoading,
-    TResult? Function(String message)? signupWithGoogleError,
-    TResult? Function()? signupWithGoogleSuccess,
-    TResult? Function()? updateProfileLoading,
-    TResult? Function(String message)? updateProfileError,
-    TResult? Function()? updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchAllAppointmentsLoading,
-    TResult Function(String message)? fetchAllAppointmentsError,
-    TResult Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult Function()? signupWithEmailAndPasswordLoading,
-    TResult Function(String message)? signupWithEmailAndPasswordError,
-    TResult Function()? signupWithEmailAndPasswordSuccess,
-    TResult Function()? signupWithGoogleLoading,
-    TResult Function(String message)? signupWithGoogleError,
-    TResult Function()? signupWithGoogleSuccess,
-    TResult Function()? updateProfileLoading,
-    TResult Function(String message)? updateProfileError,
-    TResult Function()? updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPractitionerProfileLoading != null) {
-      return fetchPractitionerProfileLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CommonStateInitial value) initial,
-    required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
-        fetchAllAppointmentsLoading,
-    required TResult Function(_CommonStateFetchAllAppointmentsError value)
-        fetchAllAppointmentsError,
-    required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
-        fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordLoading value)
-        signupWithEmailAndPasswordLoading,
-    required TResult Function(_CommonStateSignupWithEmailAndPasswordError value)
-        signupWithEmailAndPasswordError,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordSuccess value)
-        signupWithEmailAndPasswordSuccess,
-    required TResult Function(_CommonStateSignupWithGoogleLoading value)
-        signupWithGoogleLoading,
-    required TResult Function(_CommonStateSignupWithGoogleError value)
-        signupWithGoogleError,
-    required TResult Function(_CommonStateSignupWithGoogleSuccess value)
-        signupWithGoogleSuccess,
-    required TResult Function(_CommonStateUpdateProfileLoading value)
-        updateProfileLoading,
-    required TResult Function(_CommonStateUpdateProfileError value)
-        updateProfileError,
-    required TResult Function(_CommonStateUpdateProfileSuccess value)
-        updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CommonStateInitial value)? initial,
-    TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult? Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult? Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult? Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult? Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult? Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult? Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult? Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CommonStateInitial value)? initial,
-    TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPractitionerProfileLoading != null) {
-      return fetchPractitionerProfileLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CommonStateFetchPractitionerProfileLoading
-    implements CommonState {
-  factory _CommonStateFetchPractitionerProfileLoading() =
-      _$CommonStateFetchPractitionerProfileLoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$CommonStateFetchPractitionerProfileErrorImplCopyWith<$Res> {
-  factory _$$CommonStateFetchPractitionerProfileErrorImplCopyWith(
-          _$CommonStateFetchPractitionerProfileErrorImpl value,
-          $Res Function(_$CommonStateFetchPractitionerProfileErrorImpl) then) =
-      __$$CommonStateFetchPractitionerProfileErrorImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
-}
-
-/// @nodoc
-class __$$CommonStateFetchPractitionerProfileErrorImplCopyWithImpl<$Res>
-    extends _$CommonStateCopyWithImpl<$Res,
-        _$CommonStateFetchPractitionerProfileErrorImpl>
-    implements _$$CommonStateFetchPractitionerProfileErrorImplCopyWith<$Res> {
-  __$$CommonStateFetchPractitionerProfileErrorImplCopyWithImpl(
-      _$CommonStateFetchPractitionerProfileErrorImpl _value,
-      $Res Function(_$CommonStateFetchPractitionerProfileErrorImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$CommonStateFetchPractitionerProfileErrorImpl(
-      null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$CommonStateFetchPractitionerProfileErrorImpl
-    implements _CommonStateFetchPractitionerProfileError {
-  _$CommonStateFetchPractitionerProfileErrorImpl(this.message);
-
-  @override
-  final String message;
-
-  @override
-  String toString() {
-    return 'CommonState.fetchPractitionerProfileError(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommonStateFetchPractitionerProfileErrorImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommonStateFetchPractitionerProfileErrorImplCopyWith<
-          _$CommonStateFetchPractitionerProfileErrorImpl>
-      get copyWith =>
-          __$$CommonStateFetchPractitionerProfileErrorImplCopyWithImpl<
-              _$CommonStateFetchPractitionerProfileErrorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchAllAppointmentsLoading,
-    required TResult Function(String message) fetchAllAppointmentsError,
-    required TResult Function(Set<Appointment> appointments)
-        fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
-    required TResult Function() signupWithEmailAndPasswordLoading,
-    required TResult Function(String message) signupWithEmailAndPasswordError,
-    required TResult Function() signupWithEmailAndPasswordSuccess,
-    required TResult Function() signupWithGoogleLoading,
-    required TResult Function(String message) signupWithGoogleError,
-    required TResult Function() signupWithGoogleSuccess,
-    required TResult Function() updateProfileLoading,
-    required TResult Function(String message) updateProfileError,
-    required TResult Function() updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileError(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchAllAppointmentsLoading,
-    TResult? Function(String message)? fetchAllAppointmentsError,
-    TResult? Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult? Function()? signupWithEmailAndPasswordLoading,
-    TResult? Function(String message)? signupWithEmailAndPasswordError,
-    TResult? Function()? signupWithEmailAndPasswordSuccess,
-    TResult? Function()? signupWithGoogleLoading,
-    TResult? Function(String message)? signupWithGoogleError,
-    TResult? Function()? signupWithGoogleSuccess,
-    TResult? Function()? updateProfileLoading,
-    TResult? Function(String message)? updateProfileError,
-    TResult? Function()? updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileError?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchAllAppointmentsLoading,
-    TResult Function(String message)? fetchAllAppointmentsError,
-    TResult Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult Function()? signupWithEmailAndPasswordLoading,
-    TResult Function(String message)? signupWithEmailAndPasswordError,
-    TResult Function()? signupWithEmailAndPasswordSuccess,
-    TResult Function()? signupWithGoogleLoading,
-    TResult Function(String message)? signupWithGoogleError,
-    TResult Function()? signupWithGoogleSuccess,
-    TResult Function()? updateProfileLoading,
-    TResult Function(String message)? updateProfileError,
-    TResult Function()? updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPractitionerProfileError != null) {
-      return fetchPractitionerProfileError(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CommonStateInitial value) initial,
-    required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
-        fetchAllAppointmentsLoading,
-    required TResult Function(_CommonStateFetchAllAppointmentsError value)
-        fetchAllAppointmentsError,
-    required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
-        fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordLoading value)
-        signupWithEmailAndPasswordLoading,
-    required TResult Function(_CommonStateSignupWithEmailAndPasswordError value)
-        signupWithEmailAndPasswordError,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordSuccess value)
-        signupWithEmailAndPasswordSuccess,
-    required TResult Function(_CommonStateSignupWithGoogleLoading value)
-        signupWithGoogleLoading,
-    required TResult Function(_CommonStateSignupWithGoogleError value)
-        signupWithGoogleError,
-    required TResult Function(_CommonStateSignupWithGoogleSuccess value)
-        signupWithGoogleSuccess,
-    required TResult Function(_CommonStateUpdateProfileLoading value)
-        updateProfileLoading,
-    required TResult Function(_CommonStateUpdateProfileError value)
-        updateProfileError,
-    required TResult Function(_CommonStateUpdateProfileSuccess value)
-        updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CommonStateInitial value)? initial,
-    TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult? Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult? Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult? Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult? Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult? Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult? Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult? Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CommonStateInitial value)? initial,
-    TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPractitionerProfileError != null) {
-      return fetchPractitionerProfileError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CommonStateFetchPractitionerProfileError
-    implements CommonState {
-  factory _CommonStateFetchPractitionerProfileError(final String message) =
-      _$CommonStateFetchPractitionerProfileErrorImpl;
-
-  String get message;
-  @JsonKey(ignore: true)
-  _$$CommonStateFetchPractitionerProfileErrorImplCopyWith<
-          _$CommonStateFetchPractitionerProfileErrorImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CommonStateFetchPractitionerProfileSuccessImplCopyWith<$Res> {
-  factory _$$CommonStateFetchPractitionerProfileSuccessImplCopyWith(
-          _$CommonStateFetchPractitionerProfileSuccessImpl value,
-          $Res Function(_$CommonStateFetchPractitionerProfileSuccessImpl)
-              then) =
-      __$$CommonStateFetchPractitionerProfileSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Practitioner practitioner});
-
-  $PractitionerCopyWith<$Res> get practitioner;
-}
-
-/// @nodoc
-class __$$CommonStateFetchPractitionerProfileSuccessImplCopyWithImpl<$Res>
-    extends _$CommonStateCopyWithImpl<$Res,
-        _$CommonStateFetchPractitionerProfileSuccessImpl>
-    implements _$$CommonStateFetchPractitionerProfileSuccessImplCopyWith<$Res> {
-  __$$CommonStateFetchPractitionerProfileSuccessImplCopyWithImpl(
-      _$CommonStateFetchPractitionerProfileSuccessImpl _value,
-      $Res Function(_$CommonStateFetchPractitionerProfileSuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? practitioner = null,
-  }) {
-    return _then(_$CommonStateFetchPractitionerProfileSuccessImpl(
-      null == practitioner
-          ? _value.practitioner
-          : practitioner // ignore: cast_nullable_to_non_nullable
-              as Practitioner,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PractitionerCopyWith<$Res> get practitioner {
-    return $PractitionerCopyWith<$Res>(_value.practitioner, (value) {
-      return _then(_value.copyWith(practitioner: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$CommonStateFetchPractitionerProfileSuccessImpl
-    implements _CommonStateFetchPractitionerProfileSuccess {
-  _$CommonStateFetchPractitionerProfileSuccessImpl(this.practitioner);
-
-  @override
-  final Practitioner practitioner;
-
-  @override
-  String toString() {
-    return 'CommonState.fetchPractitionerProfileSuccess(practitioner: $practitioner)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommonStateFetchPractitionerProfileSuccessImpl &&
-            (identical(other.practitioner, practitioner) ||
-                other.practitioner == practitioner));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, practitioner);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommonStateFetchPractitionerProfileSuccessImplCopyWith<
-          _$CommonStateFetchPractitionerProfileSuccessImpl>
-      get copyWith =>
-          __$$CommonStateFetchPractitionerProfileSuccessImplCopyWithImpl<
-                  _$CommonStateFetchPractitionerProfileSuccessImpl>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchAllAppointmentsLoading,
-    required TResult Function(String message) fetchAllAppointmentsError,
-    required TResult Function(Set<Appointment> appointments)
-        fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
-    required TResult Function() signupWithEmailAndPasswordLoading,
-    required TResult Function(String message) signupWithEmailAndPasswordError,
-    required TResult Function() signupWithEmailAndPasswordSuccess,
-    required TResult Function() signupWithGoogleLoading,
-    required TResult Function(String message) signupWithGoogleError,
-    required TResult Function() signupWithGoogleSuccess,
-    required TResult Function() updateProfileLoading,
-    required TResult Function(String message) updateProfileError,
-    required TResult Function() updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileSuccess(practitioner);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchAllAppointmentsLoading,
-    TResult? Function(String message)? fetchAllAppointmentsError,
-    TResult? Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult? Function()? signupWithEmailAndPasswordLoading,
-    TResult? Function(String message)? signupWithEmailAndPasswordError,
-    TResult? Function()? signupWithEmailAndPasswordSuccess,
-    TResult? Function()? signupWithGoogleLoading,
-    TResult? Function(String message)? signupWithGoogleError,
-    TResult? Function()? signupWithGoogleSuccess,
-    TResult? Function()? updateProfileLoading,
-    TResult? Function(String message)? updateProfileError,
-    TResult? Function()? updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileSuccess?.call(practitioner);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchAllAppointmentsLoading,
-    TResult Function(String message)? fetchAllAppointmentsError,
-    TResult Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult Function()? signupWithEmailAndPasswordLoading,
-    TResult Function(String message)? signupWithEmailAndPasswordError,
-    TResult Function()? signupWithEmailAndPasswordSuccess,
-    TResult Function()? signupWithGoogleLoading,
-    TResult Function(String message)? signupWithGoogleError,
-    TResult Function()? signupWithGoogleSuccess,
-    TResult Function()? updateProfileLoading,
-    TResult Function(String message)? updateProfileError,
-    TResult Function()? updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPractitionerProfileSuccess != null) {
-      return fetchPractitionerProfileSuccess(practitioner);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CommonStateInitial value) initial,
-    required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
-        fetchAllAppointmentsLoading,
-    required TResult Function(_CommonStateFetchAllAppointmentsError value)
-        fetchAllAppointmentsError,
-    required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
-        fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordLoading value)
-        signupWithEmailAndPasswordLoading,
-    required TResult Function(_CommonStateSignupWithEmailAndPasswordError value)
-        signupWithEmailAndPasswordError,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordSuccess value)
-        signupWithEmailAndPasswordSuccess,
-    required TResult Function(_CommonStateSignupWithGoogleLoading value)
-        signupWithGoogleLoading,
-    required TResult Function(_CommonStateSignupWithGoogleError value)
-        signupWithGoogleError,
-    required TResult Function(_CommonStateSignupWithGoogleSuccess value)
-        signupWithGoogleSuccess,
-    required TResult Function(_CommonStateUpdateProfileLoading value)
-        updateProfileLoading,
-    required TResult Function(_CommonStateUpdateProfileError value)
-        updateProfileError,
-    required TResult Function(_CommonStateUpdateProfileSuccess value)
-        updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CommonStateInitial value)? initial,
-    TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult? Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult? Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult? Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult? Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult? Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult? Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult? Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-  }) {
-    return fetchPractitionerProfileSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CommonStateInitial value)? initial,
-    TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPractitionerProfileSuccess != null) {
-      return fetchPractitionerProfileSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CommonStateFetchPractitionerProfileSuccess
-    implements CommonState {
-  factory _CommonStateFetchPractitionerProfileSuccess(
-          final Practitioner practitioner) =
-      _$CommonStateFetchPractitionerProfileSuccessImpl;
-
-  Practitioner get practitioner;
-  @JsonKey(ignore: true)
-  _$$CommonStateFetchPractitionerProfileSuccessImplCopyWith<
-          _$CommonStateFetchPractitionerProfileSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CommonStateFetchPatientProfileLoadingImplCopyWith<$Res> {
-  factory _$$CommonStateFetchPatientProfileLoadingImplCopyWith(
-          _$CommonStateFetchPatientProfileLoadingImpl value,
-          $Res Function(_$CommonStateFetchPatientProfileLoadingImpl) then) =
-      __$$CommonStateFetchPatientProfileLoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$CommonStateFetchPatientProfileLoadingImplCopyWithImpl<$Res>
-    extends _$CommonStateCopyWithImpl<$Res,
-        _$CommonStateFetchPatientProfileLoadingImpl>
-    implements _$$CommonStateFetchPatientProfileLoadingImplCopyWith<$Res> {
-  __$$CommonStateFetchPatientProfileLoadingImplCopyWithImpl(
-      _$CommonStateFetchPatientProfileLoadingImpl _value,
-      $Res Function(_$CommonStateFetchPatientProfileLoadingImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$CommonStateFetchPatientProfileLoadingImpl
-    implements _CommonStateFetchPatientProfileLoading {
-  _$CommonStateFetchPatientProfileLoadingImpl();
-
-  @override
-  String toString() {
-    return 'CommonState.fetchPatientProfileLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommonStateFetchPatientProfileLoadingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchAllAppointmentsLoading,
-    required TResult Function(String message) fetchAllAppointmentsError,
-    required TResult Function(Set<Appointment> appointments)
-        fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
-    required TResult Function() signupWithEmailAndPasswordLoading,
-    required TResult Function(String message) signupWithEmailAndPasswordError,
-    required TResult Function() signupWithEmailAndPasswordSuccess,
-    required TResult Function() signupWithGoogleLoading,
-    required TResult Function(String message) signupWithGoogleError,
-    required TResult Function() signupWithGoogleSuccess,
-    required TResult Function() updateProfileLoading,
-    required TResult Function(String message) updateProfileError,
-    required TResult Function() updateProfileSuccess,
-  }) {
-    return fetchPatientProfileLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchAllAppointmentsLoading,
-    TResult? Function(String message)? fetchAllAppointmentsError,
-    TResult? Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult? Function()? signupWithEmailAndPasswordLoading,
-    TResult? Function(String message)? signupWithEmailAndPasswordError,
-    TResult? Function()? signupWithEmailAndPasswordSuccess,
-    TResult? Function()? signupWithGoogleLoading,
-    TResult? Function(String message)? signupWithGoogleError,
-    TResult? Function()? signupWithGoogleSuccess,
-    TResult? Function()? updateProfileLoading,
-    TResult? Function(String message)? updateProfileError,
-    TResult? Function()? updateProfileSuccess,
-  }) {
-    return fetchPatientProfileLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchAllAppointmentsLoading,
-    TResult Function(String message)? fetchAllAppointmentsError,
-    TResult Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult Function()? signupWithEmailAndPasswordLoading,
-    TResult Function(String message)? signupWithEmailAndPasswordError,
-    TResult Function()? signupWithEmailAndPasswordSuccess,
-    TResult Function()? signupWithGoogleLoading,
-    TResult Function(String message)? signupWithGoogleError,
-    TResult Function()? signupWithGoogleSuccess,
-    TResult Function()? updateProfileLoading,
-    TResult Function(String message)? updateProfileError,
-    TResult Function()? updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPatientProfileLoading != null) {
-      return fetchPatientProfileLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CommonStateInitial value) initial,
-    required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
-        fetchAllAppointmentsLoading,
-    required TResult Function(_CommonStateFetchAllAppointmentsError value)
-        fetchAllAppointmentsError,
-    required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
-        fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordLoading value)
-        signupWithEmailAndPasswordLoading,
-    required TResult Function(_CommonStateSignupWithEmailAndPasswordError value)
-        signupWithEmailAndPasswordError,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordSuccess value)
-        signupWithEmailAndPasswordSuccess,
-    required TResult Function(_CommonStateSignupWithGoogleLoading value)
-        signupWithGoogleLoading,
-    required TResult Function(_CommonStateSignupWithGoogleError value)
-        signupWithGoogleError,
-    required TResult Function(_CommonStateSignupWithGoogleSuccess value)
-        signupWithGoogleSuccess,
-    required TResult Function(_CommonStateUpdateProfileLoading value)
-        updateProfileLoading,
-    required TResult Function(_CommonStateUpdateProfileError value)
-        updateProfileError,
-    required TResult Function(_CommonStateUpdateProfileSuccess value)
-        updateProfileSuccess,
-  }) {
-    return fetchPatientProfileLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CommonStateInitial value)? initial,
-    TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult? Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult? Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult? Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult? Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult? Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult? Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult? Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-  }) {
-    return fetchPatientProfileLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CommonStateInitial value)? initial,
-    TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPatientProfileLoading != null) {
-      return fetchPatientProfileLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CommonStateFetchPatientProfileLoading implements CommonState {
-  factory _CommonStateFetchPatientProfileLoading() =
-      _$CommonStateFetchPatientProfileLoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$CommonStateFetchPatientProfileErrorImplCopyWith<$Res> {
-  factory _$$CommonStateFetchPatientProfileErrorImplCopyWith(
-          _$CommonStateFetchPatientProfileErrorImpl value,
-          $Res Function(_$CommonStateFetchPatientProfileErrorImpl) then) =
-      __$$CommonStateFetchPatientProfileErrorImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
-}
-
-/// @nodoc
-class __$$CommonStateFetchPatientProfileErrorImplCopyWithImpl<$Res>
-    extends _$CommonStateCopyWithImpl<$Res,
-        _$CommonStateFetchPatientProfileErrorImpl>
-    implements _$$CommonStateFetchPatientProfileErrorImplCopyWith<$Res> {
-  __$$CommonStateFetchPatientProfileErrorImplCopyWithImpl(
-      _$CommonStateFetchPatientProfileErrorImpl _value,
-      $Res Function(_$CommonStateFetchPatientProfileErrorImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$CommonStateFetchPatientProfileErrorImpl(
-      null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$CommonStateFetchPatientProfileErrorImpl
-    implements _CommonStateFetchPatientProfileError {
-  _$CommonStateFetchPatientProfileErrorImpl(this.message);
-
-  @override
-  final String message;
-
-  @override
-  String toString() {
-    return 'CommonState.fetchPatientProfileError(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommonStateFetchPatientProfileErrorImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommonStateFetchPatientProfileErrorImplCopyWith<
-          _$CommonStateFetchPatientProfileErrorImpl>
-      get copyWith => __$$CommonStateFetchPatientProfileErrorImplCopyWithImpl<
-          _$CommonStateFetchPatientProfileErrorImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchAllAppointmentsLoading,
-    required TResult Function(String message) fetchAllAppointmentsError,
-    required TResult Function(Set<Appointment> appointments)
-        fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
-    required TResult Function() signupWithEmailAndPasswordLoading,
-    required TResult Function(String message) signupWithEmailAndPasswordError,
-    required TResult Function() signupWithEmailAndPasswordSuccess,
-    required TResult Function() signupWithGoogleLoading,
-    required TResult Function(String message) signupWithGoogleError,
-    required TResult Function() signupWithGoogleSuccess,
-    required TResult Function() updateProfileLoading,
-    required TResult Function(String message) updateProfileError,
-    required TResult Function() updateProfileSuccess,
-  }) {
-    return fetchPatientProfileError(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchAllAppointmentsLoading,
-    TResult? Function(String message)? fetchAllAppointmentsError,
-    TResult? Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult? Function()? signupWithEmailAndPasswordLoading,
-    TResult? Function(String message)? signupWithEmailAndPasswordError,
-    TResult? Function()? signupWithEmailAndPasswordSuccess,
-    TResult? Function()? signupWithGoogleLoading,
-    TResult? Function(String message)? signupWithGoogleError,
-    TResult? Function()? signupWithGoogleSuccess,
-    TResult? Function()? updateProfileLoading,
-    TResult? Function(String message)? updateProfileError,
-    TResult? Function()? updateProfileSuccess,
-  }) {
-    return fetchPatientProfileError?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchAllAppointmentsLoading,
-    TResult Function(String message)? fetchAllAppointmentsError,
-    TResult Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult Function()? signupWithEmailAndPasswordLoading,
-    TResult Function(String message)? signupWithEmailAndPasswordError,
-    TResult Function()? signupWithEmailAndPasswordSuccess,
-    TResult Function()? signupWithGoogleLoading,
-    TResult Function(String message)? signupWithGoogleError,
-    TResult Function()? signupWithGoogleSuccess,
-    TResult Function()? updateProfileLoading,
-    TResult Function(String message)? updateProfileError,
-    TResult Function()? updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPatientProfileError != null) {
-      return fetchPatientProfileError(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CommonStateInitial value) initial,
-    required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
-        fetchAllAppointmentsLoading,
-    required TResult Function(_CommonStateFetchAllAppointmentsError value)
-        fetchAllAppointmentsError,
-    required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
-        fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordLoading value)
-        signupWithEmailAndPasswordLoading,
-    required TResult Function(_CommonStateSignupWithEmailAndPasswordError value)
-        signupWithEmailAndPasswordError,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordSuccess value)
-        signupWithEmailAndPasswordSuccess,
-    required TResult Function(_CommonStateSignupWithGoogleLoading value)
-        signupWithGoogleLoading,
-    required TResult Function(_CommonStateSignupWithGoogleError value)
-        signupWithGoogleError,
-    required TResult Function(_CommonStateSignupWithGoogleSuccess value)
-        signupWithGoogleSuccess,
-    required TResult Function(_CommonStateUpdateProfileLoading value)
-        updateProfileLoading,
-    required TResult Function(_CommonStateUpdateProfileError value)
-        updateProfileError,
-    required TResult Function(_CommonStateUpdateProfileSuccess value)
-        updateProfileSuccess,
-  }) {
-    return fetchPatientProfileError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CommonStateInitial value)? initial,
-    TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult? Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult? Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult? Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult? Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult? Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult? Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult? Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-  }) {
-    return fetchPatientProfileError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CommonStateInitial value)? initial,
-    TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPatientProfileError != null) {
-      return fetchPatientProfileError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CommonStateFetchPatientProfileError implements CommonState {
-  factory _CommonStateFetchPatientProfileError(final String message) =
-      _$CommonStateFetchPatientProfileErrorImpl;
-
-  String get message;
-  @JsonKey(ignore: true)
-  _$$CommonStateFetchPatientProfileErrorImplCopyWith<
-          _$CommonStateFetchPatientProfileErrorImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CommonStateFetchPatientProfileSuccessImplCopyWith<$Res> {
-  factory _$$CommonStateFetchPatientProfileSuccessImplCopyWith(
-          _$CommonStateFetchPatientProfileSuccessImpl value,
-          $Res Function(_$CommonStateFetchPatientProfileSuccessImpl) then) =
-      __$$CommonStateFetchPatientProfileSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Patient patient});
-
-  $PatientCopyWith<$Res> get patient;
-}
-
-/// @nodoc
-class __$$CommonStateFetchPatientProfileSuccessImplCopyWithImpl<$Res>
-    extends _$CommonStateCopyWithImpl<$Res,
-        _$CommonStateFetchPatientProfileSuccessImpl>
-    implements _$$CommonStateFetchPatientProfileSuccessImplCopyWith<$Res> {
-  __$$CommonStateFetchPatientProfileSuccessImplCopyWithImpl(
-      _$CommonStateFetchPatientProfileSuccessImpl _value,
-      $Res Function(_$CommonStateFetchPatientProfileSuccessImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? patient = null,
-  }) {
-    return _then(_$CommonStateFetchPatientProfileSuccessImpl(
-      null == patient
-          ? _value.patient
-          : patient // ignore: cast_nullable_to_non_nullable
-              as Patient,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PatientCopyWith<$Res> get patient {
-    return $PatientCopyWith<$Res>(_value.patient, (value) {
-      return _then(_value.copyWith(patient: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$CommonStateFetchPatientProfileSuccessImpl
-    implements _CommonStateFetchPatientProfileSuccess {
-  _$CommonStateFetchPatientProfileSuccessImpl(this.patient);
-
-  @override
-  final Patient patient;
-
-  @override
-  String toString() {
-    return 'CommonState.fetchPatientProfileSuccess(patient: $patient)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CommonStateFetchPatientProfileSuccessImpl &&
-            (identical(other.patient, patient) || other.patient == patient));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, patient);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CommonStateFetchPatientProfileSuccessImplCopyWith<
-          _$CommonStateFetchPatientProfileSuccessImpl>
-      get copyWith => __$$CommonStateFetchPatientProfileSuccessImplCopyWithImpl<
-          _$CommonStateFetchPatientProfileSuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() fetchAllAppointmentsLoading,
-    required TResult Function(String message) fetchAllAppointmentsError,
-    required TResult Function(Set<Appointment> appointments)
-        fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
-    required TResult Function() signupWithEmailAndPasswordLoading,
-    required TResult Function(String message) signupWithEmailAndPasswordError,
-    required TResult Function() signupWithEmailAndPasswordSuccess,
-    required TResult Function() signupWithGoogleLoading,
-    required TResult Function(String message) signupWithGoogleError,
-    required TResult Function() signupWithGoogleSuccess,
-    required TResult Function() updateProfileLoading,
-    required TResult Function(String message) updateProfileError,
-    required TResult Function() updateProfileSuccess,
-  }) {
-    return fetchPatientProfileSuccess(patient);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? fetchAllAppointmentsLoading,
-    TResult? Function(String message)? fetchAllAppointmentsError,
-    TResult? Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult? Function()? signupWithEmailAndPasswordLoading,
-    TResult? Function(String message)? signupWithEmailAndPasswordError,
-    TResult? Function()? signupWithEmailAndPasswordSuccess,
-    TResult? Function()? signupWithGoogleLoading,
-    TResult? Function(String message)? signupWithGoogleError,
-    TResult? Function()? signupWithGoogleSuccess,
-    TResult? Function()? updateProfileLoading,
-    TResult? Function(String message)? updateProfileError,
-    TResult? Function()? updateProfileSuccess,
-  }) {
-    return fetchPatientProfileSuccess?.call(patient);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? fetchAllAppointmentsLoading,
-    TResult Function(String message)? fetchAllAppointmentsError,
-    TResult Function(Set<Appointment> appointments)?
-        fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
-    TResult Function()? signupWithEmailAndPasswordLoading,
-    TResult Function(String message)? signupWithEmailAndPasswordError,
-    TResult Function()? signupWithEmailAndPasswordSuccess,
-    TResult Function()? signupWithGoogleLoading,
-    TResult Function(String message)? signupWithGoogleError,
-    TResult Function()? signupWithGoogleSuccess,
-    TResult Function()? updateProfileLoading,
-    TResult Function(String message)? updateProfileError,
-    TResult Function()? updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPatientProfileSuccess != null) {
-      return fetchPatientProfileSuccess(patient);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CommonStateInitial value) initial,
-    required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
-        fetchAllAppointmentsLoading,
-    required TResult Function(_CommonStateFetchAllAppointmentsError value)
-        fetchAllAppointmentsError,
-    required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
-        fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordLoading value)
-        signupWithEmailAndPasswordLoading,
-    required TResult Function(_CommonStateSignupWithEmailAndPasswordError value)
-        signupWithEmailAndPasswordError,
-    required TResult Function(
-            _CommonStateSignupWithEmailAndPasswordSuccess value)
-        signupWithEmailAndPasswordSuccess,
-    required TResult Function(_CommonStateSignupWithGoogleLoading value)
-        signupWithGoogleLoading,
-    required TResult Function(_CommonStateSignupWithGoogleError value)
-        signupWithGoogleError,
-    required TResult Function(_CommonStateSignupWithGoogleSuccess value)
-        signupWithGoogleSuccess,
-    required TResult Function(_CommonStateUpdateProfileLoading value)
-        updateProfileLoading,
-    required TResult Function(_CommonStateUpdateProfileError value)
-        updateProfileError,
-    required TResult Function(_CommonStateUpdateProfileSuccess value)
-        updateProfileSuccess,
-  }) {
-    return fetchPatientProfileSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CommonStateInitial value)? initial,
-    TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult? Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult? Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult? Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult? Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult? Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult? Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult? Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult? Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-  }) {
-    return fetchPatientProfileSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CommonStateInitial value)? initial,
-    TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
-        fetchAllAppointmentsLoading,
-    TResult Function(_CommonStateFetchAllAppointmentsError value)?
-        fetchAllAppointmentsError,
-    TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
-        fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
-        signupWithEmailAndPasswordLoading,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
-        signupWithEmailAndPasswordError,
-    TResult Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
-        signupWithEmailAndPasswordSuccess,
-    TResult Function(_CommonStateSignupWithGoogleLoading value)?
-        signupWithGoogleLoading,
-    TResult Function(_CommonStateSignupWithGoogleError value)?
-        signupWithGoogleError,
-    TResult Function(_CommonStateSignupWithGoogleSuccess value)?
-        signupWithGoogleSuccess,
-    TResult Function(_CommonStateUpdateProfileLoading value)?
-        updateProfileLoading,
-    TResult Function(_CommonStateUpdateProfileError value)? updateProfileError,
-    TResult Function(_CommonStateUpdateProfileSuccess value)?
-        updateProfileSuccess,
-    required TResult orElse(),
-  }) {
-    if (fetchPatientProfileSuccess != null) {
-      return fetchPatientProfileSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CommonStateFetchPatientProfileSuccess implements CommonState {
-  factory _CommonStateFetchPatientProfileSuccess(final Patient patient) =
-      _$CommonStateFetchPatientProfileSuccessImpl;
-
-  Patient get patient;
-  @JsonKey(ignore: true)
-  _$$CommonStateFetchPatientProfileSuccessImplCopyWith<
-          _$CommonStateFetchPatientProfileSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3220,13 +1153,6 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -3248,13 +1174,6 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -3276,13 +1195,6 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -3310,18 +1222,6 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -3356,18 +1256,6 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -3399,18 +1287,6 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -3521,13 +1397,6 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -3549,13 +1418,6 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -3577,13 +1439,6 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -3611,18 +1466,6 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -3657,18 +1500,6 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -3700,18 +1531,6 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -3801,13 +1620,6 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -3829,13 +1641,6 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -3857,13 +1662,6 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -3891,18 +1689,6 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -3937,18 +1723,6 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -3980,18 +1754,6 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -4072,13 +1834,6 @@ class _$CommonStateSignupWithGoogleLoadingImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -4100,13 +1855,6 @@ class _$CommonStateSignupWithGoogleLoadingImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -4128,13 +1876,6 @@ class _$CommonStateSignupWithGoogleLoadingImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -4162,18 +1903,6 @@ class _$CommonStateSignupWithGoogleLoadingImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -4208,18 +1937,6 @@ class _$CommonStateSignupWithGoogleLoadingImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -4251,18 +1968,6 @@ class _$CommonStateSignupWithGoogleLoadingImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -4369,13 +2074,6 @@ class _$CommonStateSignupWithGoogleErrorImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -4397,13 +2095,6 @@ class _$CommonStateSignupWithGoogleErrorImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -4425,13 +2116,6 @@ class _$CommonStateSignupWithGoogleErrorImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -4459,18 +2143,6 @@ class _$CommonStateSignupWithGoogleErrorImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -4505,18 +2177,6 @@ class _$CommonStateSignupWithGoogleErrorImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -4548,18 +2208,6 @@ class _$CommonStateSignupWithGoogleErrorImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -4645,13 +2293,6 @@ class _$CommonStateSignupWithGoogleSuccessImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -4673,13 +2314,6 @@ class _$CommonStateSignupWithGoogleSuccessImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -4701,13 +2335,6 @@ class _$CommonStateSignupWithGoogleSuccessImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -4735,18 +2362,6 @@ class _$CommonStateSignupWithGoogleSuccessImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -4781,18 +2396,6 @@ class _$CommonStateSignupWithGoogleSuccessImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -4824,18 +2427,6 @@ class _$CommonStateSignupWithGoogleSuccessImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -4915,13 +2506,6 @@ class _$CommonStateUpdateProfileLoadingImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -4943,13 +2527,6 @@ class _$CommonStateUpdateProfileLoadingImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -4971,13 +2548,6 @@ class _$CommonStateUpdateProfileLoadingImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -5005,18 +2575,6 @@ class _$CommonStateUpdateProfileLoadingImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -5051,18 +2609,6 @@ class _$CommonStateUpdateProfileLoadingImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -5094,18 +2640,6 @@ class _$CommonStateUpdateProfileLoadingImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -5211,13 +2745,6 @@ class _$CommonStateUpdateProfileErrorImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -5239,13 +2766,6 @@ class _$CommonStateUpdateProfileErrorImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -5267,13 +2787,6 @@ class _$CommonStateUpdateProfileErrorImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -5301,18 +2814,6 @@ class _$CommonStateUpdateProfileErrorImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -5347,18 +2848,6 @@ class _$CommonStateUpdateProfileErrorImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -5390,18 +2879,6 @@ class _$CommonStateUpdateProfileErrorImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -5487,13 +2964,6 @@ class _$CommonStateUpdateProfileSuccessImpl
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
         fetchAllAppointmentsSuccess,
-    required TResult Function() fetchPractitionerProfileLoading,
-    required TResult Function(String message) fetchPractitionerProfileError,
-    required TResult Function(Practitioner practitioner)
-        fetchPractitionerProfileSuccess,
-    required TResult Function() fetchPatientProfileLoading,
-    required TResult Function(String message) fetchPatientProfileError,
-    required TResult Function(Patient patient) fetchPatientProfileSuccess,
     required TResult Function() signupWithEmailAndPasswordLoading,
     required TResult Function(String message) signupWithEmailAndPasswordError,
     required TResult Function() signupWithEmailAndPasswordSuccess,
@@ -5515,13 +2985,6 @@ class _$CommonStateUpdateProfileSuccessImpl
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult? Function()? fetchPractitionerProfileLoading,
-    TResult? Function(String message)? fetchPractitionerProfileError,
-    TResult? Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function()? fetchPatientProfileLoading,
-    TResult? Function(String message)? fetchPatientProfileError,
-    TResult? Function(Patient patient)? fetchPatientProfileSuccess,
     TResult? Function()? signupWithEmailAndPasswordLoading,
     TResult? Function(String message)? signupWithEmailAndPasswordError,
     TResult? Function()? signupWithEmailAndPasswordSuccess,
@@ -5543,13 +3006,6 @@ class _$CommonStateUpdateProfileSuccessImpl
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
         fetchAllAppointmentsSuccess,
-    TResult Function()? fetchPractitionerProfileLoading,
-    TResult Function(String message)? fetchPractitionerProfileError,
-    TResult Function(Practitioner practitioner)?
-        fetchPractitionerProfileSuccess,
-    TResult Function()? fetchPatientProfileLoading,
-    TResult Function(String message)? fetchPatientProfileError,
-    TResult Function(Patient patient)? fetchPatientProfileSuccess,
     TResult Function()? signupWithEmailAndPasswordLoading,
     TResult Function(String message)? signupWithEmailAndPasswordError,
     TResult Function()? signupWithEmailAndPasswordSuccess,
@@ -5577,18 +3033,6 @@ class _$CommonStateUpdateProfileSuccessImpl
         fetchAllAppointmentsError,
     required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
         fetchAllAppointmentsSuccess,
-    required TResult Function(_CommonStateFetchPractitionerProfileLoading value)
-        fetchPractitionerProfileLoading,
-    required TResult Function(_CommonStateFetchPractitionerProfileError value)
-        fetchPractitionerProfileError,
-    required TResult Function(_CommonStateFetchPractitionerProfileSuccess value)
-        fetchPractitionerProfileSuccess,
-    required TResult Function(_CommonStateFetchPatientProfileLoading value)
-        fetchPatientProfileLoading,
-    required TResult Function(_CommonStateFetchPatientProfileError value)
-        fetchPatientProfileError,
-    required TResult Function(_CommonStateFetchPatientProfileSuccess value)
-        fetchPatientProfileSuccess,
     required TResult Function(
             _CommonStateSignupWithEmailAndPasswordLoading value)
         signupWithEmailAndPasswordLoading,
@@ -5623,18 +3067,6 @@ class _$CommonStateUpdateProfileSuccessImpl
         fetchAllAppointmentsError,
     TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult? Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult? Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult? Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult? Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult? Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult? Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
@@ -5666,18 +3098,6 @@ class _$CommonStateUpdateProfileSuccessImpl
         fetchAllAppointmentsError,
     TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
         fetchAllAppointmentsSuccess,
-    TResult Function(_CommonStateFetchPractitionerProfileLoading value)?
-        fetchPractitionerProfileLoading,
-    TResult Function(_CommonStateFetchPractitionerProfileError value)?
-        fetchPractitionerProfileError,
-    TResult Function(_CommonStateFetchPractitionerProfileSuccess value)?
-        fetchPractitionerProfileSuccess,
-    TResult Function(_CommonStateFetchPatientProfileLoading value)?
-        fetchPatientProfileLoading,
-    TResult Function(_CommonStateFetchPatientProfileError value)?
-        fetchPatientProfileError,
-    TResult Function(_CommonStateFetchPatientProfileSuccess value)?
-        fetchPatientProfileSuccess,
     TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
         signupWithEmailAndPasswordLoading,
     TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?

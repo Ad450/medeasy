@@ -6,7 +6,7 @@ import 'package:core/utils/errors.dart';
 import 'package:core/utils/typedefs.dart';
 
 sealed class PractitionerRepository {
-  Future<VoidType> changeAvailability(Day day);
+  Future<VoidType> changeAvailability(String dayId);
   Stream<Practitioner> fetchPractitionerProfile();
 }
 
@@ -17,15 +17,15 @@ class PractitionerRepositoryImpl implements PractitionerRepository {
   PractitionerRepositoryImpl(this._firestoreStorage, this._localStorage);
 
   @override
-  Future<VoidType> changeAvailability(Day day) async {
+  Future<VoidType> changeAvailability(String dayId) async {
     try {
-      final storedDay = await _firestoreStorage.getByIdFuture(id: day.id, collection: Collection.day);
+      final storedDay = await _firestoreStorage.getByIdFuture(id: dayId, collection: Collection.day);
       final currentStatus = Day.fromJson(storedDay.data() as Map<String, Object?>).booked;
 
       await _firestoreStorage.update(
-        id: day.id,
+        id: dayId,
         collection: Collection.day,
-        data: day.copyWith(booked: !currentStatus),
+        data: {"booked": !currentStatus},
       );
       return const VoidType();
     } catch (e) {

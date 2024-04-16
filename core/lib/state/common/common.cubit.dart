@@ -1,10 +1,10 @@
 import 'package:core/di/locator.dart';
 import 'package:core/domain/usecases/common/fetch.all.appointments.dart';
-import 'package:core/domain/usecases/patient/fetch.patient.profile.dart';
 import 'package:core/domain/usecases/common/signup.with.email.password.dart';
 import 'package:core/domain/usecases/common/signup.with.google.dart';
 import 'package:core/domain/usecases/common/update.profile.dart';
-import 'package:core/domain/usecases/practitioner/fetch.practitioner.profile.dart';
+// import 'package:core/domain/usecases/patient/fetch.patient.profile.dart';
+// import 'package:core/domain/usecases/practitioner/fetch.practitioner.profile.dart';
 import 'package:core/models/common/appointment.dart';
 import 'package:core/models/patient/patient.dart';
 import 'package:core/models/practitioner/practitioner.dart';
@@ -12,33 +12,25 @@ import 'package:core/utils/typedefs.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'common.state.dart';
 part 'common.cubit.freezed.dart';
+part 'common.state.dart';
 
 class CommonCubit extends Cubit<CommonState> {
   final FetchAllAppointments _fetchAllAppointments;
   final SignupWithEmailAndPassword _signupWithEmailAndPassword;
   final SignupWithGoogle _signupWithGoogle;
   final UpdateProfile _updateProfile;
-  final FetchPatientProfile _fetchPatientProfile;
-  final FetchPractitionerProfile _fetchPractitionerProfile;
 
   CommonCubit()
       : _fetchAllAppointments = locator.get<FetchAllAppointments>(),
-        _fetchPatientProfile = locator.get<FetchPatientProfile>(),
         _signupWithEmailAndPassword = locator.get<SignupWithEmailAndPassword>(),
         _signupWithGoogle = locator.get<SignupWithGoogle>(),
         _updateProfile = locator.get<UpdateProfile>(),
-        _fetchPractitionerProfile = locator.get<FetchPractitionerProfile>(),
         super(CommonState.initial());
 
   Stream<List<Appointment>> fetchAllPatientAppointments() => _fetchAllAppointments(UserType.patient);
 
   Stream<List<Appointment>> fetchAllPractitionerAppointments() => _fetchAllAppointments(UserType.practitioner);
-
-  Stream<Patient> fetchPatientProfile() => _fetchPatientProfile();
-
-  Stream<Practitioner> fetchPractitionerProfile() => _fetchPractitionerProfile();
 
   Future<void> signupPatientWithEmailAndPassword(String email, String password) async {
     emit(CommonState.signupWithEmailAndPasswordLoading());

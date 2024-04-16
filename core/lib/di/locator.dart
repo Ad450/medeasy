@@ -2,13 +2,14 @@ import 'package:core/domain/repository/common.dart';
 import 'package:core/domain/repository/patient.dart';
 import 'package:core/domain/repository/practitioner.dart';
 import 'package:core/domain/usecases/common/fetch.all.appointments.dart';
-import 'package:core/domain/usecases/patient/fetch.patient.profile.dart';
 import 'package:core/domain/usecases/common/signup.with.email.password.dart';
 import 'package:core/domain/usecases/common/signup.with.facebook.dart';
 import 'package:core/domain/usecases/common/signup.with.google.dart';
 import 'package:core/domain/usecases/common/update.profile.dart';
+import 'package:core/domain/usecases/patient/fetch.patient.profile.dart';
 import 'package:core/domain/usecases/patient/schedule.appointment.dart';
 import 'package:core/domain/usecases/patient/update.appointment.dart';
+import 'package:core/domain/usecases/practitioner/change.availability.dart';
 import 'package:core/storage/firestore/cloud.dart';
 import 'package:core/storage/firestore/firestore.storage.dart';
 import 'package:core/storage/local/local.storage.dart';
@@ -62,5 +63,8 @@ void setupLocator() {
   );
   locator.registerLazySingleton<UpdateAppointment>(
     () => UpdateAppointment(locator.get<PatientRepository>()),
+  );
+  locator.registerLazySingleton<ChangeAvailability>(
+    () => ChangeAvailability(locator.get<PractitionerRepository>()),
   );
 }

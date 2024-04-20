@@ -19,3 +19,10 @@ class ApiError {
 
   ApiError(this.message, {this.source, this.stackTrace});
 }
+
+class LocalIdNullError {
+  final String message;
+  final String? source;
+
+  LocalIdNullError(this.message, {this.source});
+}

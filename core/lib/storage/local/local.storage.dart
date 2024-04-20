@@ -4,9 +4,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 enum LocalKeys { id }
 
 class LocalStorage {
-  late SharedPreferences sharedPreferences;
+  static late SharedPreferences sharedPreferences;
 
-  Future<void> initCustomSharedPrefs() async {
+  static Future<void> init() async {
     sharedPreferences = await SharedPreferences.getInstance();
   }
 
@@ -25,7 +25,7 @@ class LocalStorage {
   String getString(String key) {
     final result = sharedPreferences.getString(key);
     if (result == null) {
-      throw ApiError("null id from local storage", source: "LocalStorage- getString");
+      throw LocalIdNullError("null id from local storage", source: "LocalStorage- getString");
     }
     return result;
   }

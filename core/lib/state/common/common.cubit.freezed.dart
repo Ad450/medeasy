@@ -19,6 +19,8 @@ mixin _$CommonState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -37,6 +39,8 @@ mixin _$CommonState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -55,6 +59,8 @@ mixin _$CommonState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -74,6 +80,9 @@ mixin _$CommonState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -105,6 +114,9 @@ mixin _$CommonState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -133,6 +145,9 @@ mixin _$CommonState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -218,6 +233,8 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -239,6 +256,8 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -260,6 +279,8 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -285,6 +306,9 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -319,6 +343,9 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -350,6 +377,9 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -384,6 +414,492 @@ class _$CommonStateInitialImpl implements _CommonStateInitial {
 
 abstract class _CommonStateInitial implements CommonState {
   factory _CommonStateInitial() = _$CommonStateInitialImpl;
+}
+
+/// @nodoc
+abstract class _$$CommonStateAuthenticatedImplCopyWith<$Res> {
+  factory _$$CommonStateAuthenticatedImplCopyWith(
+          _$CommonStateAuthenticatedImpl value,
+          $Res Function(_$CommonStateAuthenticatedImpl) then) =
+      __$$CommonStateAuthenticatedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CommonStateAuthenticatedImplCopyWithImpl<$Res>
+    extends _$CommonStateCopyWithImpl<$Res, _$CommonStateAuthenticatedImpl>
+    implements _$$CommonStateAuthenticatedImplCopyWith<$Res> {
+  __$$CommonStateAuthenticatedImplCopyWithImpl(
+      _$CommonStateAuthenticatedImpl _value,
+      $Res Function(_$CommonStateAuthenticatedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CommonStateAuthenticatedImpl implements _CommonStateAuthenticated {
+  _$CommonStateAuthenticatedImpl();
+
+  @override
+  String toString() {
+    return 'CommonState.authenticated()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CommonStateAuthenticatedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
+    required TResult Function() fetchAllAppointmentsLoading,
+    required TResult Function(String message) fetchAllAppointmentsError,
+    required TResult Function(Set<Appointment> appointments)
+        fetchAllAppointmentsSuccess,
+    required TResult Function() signupWithEmailAndPasswordLoading,
+    required TResult Function(String message) signupWithEmailAndPasswordError,
+    required TResult Function() signupWithEmailAndPasswordSuccess,
+    required TResult Function() signupWithGoogleLoading,
+    required TResult Function(String message) signupWithGoogleError,
+    required TResult Function() signupWithGoogleSuccess,
+    required TResult Function() updateProfileLoading,
+    required TResult Function(String message) updateProfileError,
+    required TResult Function() updateProfileSuccess,
+  }) {
+    return authenticated();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
+    TResult? Function()? fetchAllAppointmentsLoading,
+    TResult? Function(String message)? fetchAllAppointmentsError,
+    TResult? Function(Set<Appointment> appointments)?
+        fetchAllAppointmentsSuccess,
+    TResult? Function()? signupWithEmailAndPasswordLoading,
+    TResult? Function(String message)? signupWithEmailAndPasswordError,
+    TResult? Function()? signupWithEmailAndPasswordSuccess,
+    TResult? Function()? signupWithGoogleLoading,
+    TResult? Function(String message)? signupWithGoogleError,
+    TResult? Function()? signupWithGoogleSuccess,
+    TResult? Function()? updateProfileLoading,
+    TResult? Function(String message)? updateProfileError,
+    TResult? Function()? updateProfileSuccess,
+  }) {
+    return authenticated?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
+    TResult Function()? fetchAllAppointmentsLoading,
+    TResult Function(String message)? fetchAllAppointmentsError,
+    TResult Function(Set<Appointment> appointments)?
+        fetchAllAppointmentsSuccess,
+    TResult Function()? signupWithEmailAndPasswordLoading,
+    TResult Function(String message)? signupWithEmailAndPasswordError,
+    TResult Function()? signupWithEmailAndPasswordSuccess,
+    TResult Function()? signupWithGoogleLoading,
+    TResult Function(String message)? signupWithGoogleError,
+    TResult Function()? signupWithGoogleSuccess,
+    TResult Function()? updateProfileLoading,
+    TResult Function(String message)? updateProfileError,
+    TResult Function()? updateProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (authenticated != null) {
+      return authenticated();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
+    required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
+        fetchAllAppointmentsLoading,
+    required TResult Function(_CommonStateFetchAllAppointmentsError value)
+        fetchAllAppointmentsError,
+    required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
+        fetchAllAppointmentsSuccess,
+    required TResult Function(
+            _CommonStateSignupWithEmailAndPasswordLoading value)
+        signupWithEmailAndPasswordLoading,
+    required TResult Function(_CommonStateSignupWithEmailAndPasswordError value)
+        signupWithEmailAndPasswordError,
+    required TResult Function(
+            _CommonStateSignupWithEmailAndPasswordSuccess value)
+        signupWithEmailAndPasswordSuccess,
+    required TResult Function(_CommonStateSignupWithGoogleLoading value)
+        signupWithGoogleLoading,
+    required TResult Function(_CommonStateSignupWithGoogleError value)
+        signupWithGoogleError,
+    required TResult Function(_CommonStateSignupWithGoogleSuccess value)
+        signupWithGoogleSuccess,
+    required TResult Function(_CommonStateUpdateProfileLoading value)
+        updateProfileLoading,
+    required TResult Function(_CommonStateUpdateProfileError value)
+        updateProfileError,
+    required TResult Function(_CommonStateUpdateProfileSuccess value)
+        updateProfileSuccess,
+  }) {
+    return authenticated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
+    TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
+        fetchAllAppointmentsLoading,
+    TResult? Function(_CommonStateFetchAllAppointmentsError value)?
+        fetchAllAppointmentsError,
+    TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
+        fetchAllAppointmentsSuccess,
+    TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
+        signupWithEmailAndPasswordLoading,
+    TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
+        signupWithEmailAndPasswordError,
+    TResult? Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
+        signupWithEmailAndPasswordSuccess,
+    TResult? Function(_CommonStateSignupWithGoogleLoading value)?
+        signupWithGoogleLoading,
+    TResult? Function(_CommonStateSignupWithGoogleError value)?
+        signupWithGoogleError,
+    TResult? Function(_CommonStateSignupWithGoogleSuccess value)?
+        signupWithGoogleSuccess,
+    TResult? Function(_CommonStateUpdateProfileLoading value)?
+        updateProfileLoading,
+    TResult? Function(_CommonStateUpdateProfileError value)? updateProfileError,
+    TResult? Function(_CommonStateUpdateProfileSuccess value)?
+        updateProfileSuccess,
+  }) {
+    return authenticated?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
+    TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
+        fetchAllAppointmentsLoading,
+    TResult Function(_CommonStateFetchAllAppointmentsError value)?
+        fetchAllAppointmentsError,
+    TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
+        fetchAllAppointmentsSuccess,
+    TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
+        signupWithEmailAndPasswordLoading,
+    TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
+        signupWithEmailAndPasswordError,
+    TResult Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
+        signupWithEmailAndPasswordSuccess,
+    TResult Function(_CommonStateSignupWithGoogleLoading value)?
+        signupWithGoogleLoading,
+    TResult Function(_CommonStateSignupWithGoogleError value)?
+        signupWithGoogleError,
+    TResult Function(_CommonStateSignupWithGoogleSuccess value)?
+        signupWithGoogleSuccess,
+    TResult Function(_CommonStateUpdateProfileLoading value)?
+        updateProfileLoading,
+    TResult Function(_CommonStateUpdateProfileError value)? updateProfileError,
+    TResult Function(_CommonStateUpdateProfileSuccess value)?
+        updateProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (authenticated != null) {
+      return authenticated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CommonStateAuthenticated implements CommonState {
+  factory _CommonStateAuthenticated() = _$CommonStateAuthenticatedImpl;
+}
+
+/// @nodoc
+abstract class _$$CommonStateAuthenticationErrorImplCopyWith<$Res> {
+  factory _$$CommonStateAuthenticationErrorImplCopyWith(
+          _$CommonStateAuthenticationErrorImpl value,
+          $Res Function(_$CommonStateAuthenticationErrorImpl) then) =
+      __$$CommonStateAuthenticationErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$CommonStateAuthenticationErrorImplCopyWithImpl<$Res>
+    extends _$CommonStateCopyWithImpl<$Res,
+        _$CommonStateAuthenticationErrorImpl>
+    implements _$$CommonStateAuthenticationErrorImplCopyWith<$Res> {
+  __$$CommonStateAuthenticationErrorImplCopyWithImpl(
+      _$CommonStateAuthenticationErrorImpl _value,
+      $Res Function(_$CommonStateAuthenticationErrorImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$CommonStateAuthenticationErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CommonStateAuthenticationErrorImpl
+    implements _CommonStateAuthenticationError {
+  _$CommonStateAuthenticationErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CommonState.authenticationError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CommonStateAuthenticationErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CommonStateAuthenticationErrorImplCopyWith<
+          _$CommonStateAuthenticationErrorImpl>
+      get copyWith => __$$CommonStateAuthenticationErrorImplCopyWithImpl<
+          _$CommonStateAuthenticationErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
+    required TResult Function() fetchAllAppointmentsLoading,
+    required TResult Function(String message) fetchAllAppointmentsError,
+    required TResult Function(Set<Appointment> appointments)
+        fetchAllAppointmentsSuccess,
+    required TResult Function() signupWithEmailAndPasswordLoading,
+    required TResult Function(String message) signupWithEmailAndPasswordError,
+    required TResult Function() signupWithEmailAndPasswordSuccess,
+    required TResult Function() signupWithGoogleLoading,
+    required TResult Function(String message) signupWithGoogleError,
+    required TResult Function() signupWithGoogleSuccess,
+    required TResult Function() updateProfileLoading,
+    required TResult Function(String message) updateProfileError,
+    required TResult Function() updateProfileSuccess,
+  }) {
+    return authenticationError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
+    TResult? Function()? fetchAllAppointmentsLoading,
+    TResult? Function(String message)? fetchAllAppointmentsError,
+    TResult? Function(Set<Appointment> appointments)?
+        fetchAllAppointmentsSuccess,
+    TResult? Function()? signupWithEmailAndPasswordLoading,
+    TResult? Function(String message)? signupWithEmailAndPasswordError,
+    TResult? Function()? signupWithEmailAndPasswordSuccess,
+    TResult? Function()? signupWithGoogleLoading,
+    TResult? Function(String message)? signupWithGoogleError,
+    TResult? Function()? signupWithGoogleSuccess,
+    TResult? Function()? updateProfileLoading,
+    TResult? Function(String message)? updateProfileError,
+    TResult? Function()? updateProfileSuccess,
+  }) {
+    return authenticationError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
+    TResult Function()? fetchAllAppointmentsLoading,
+    TResult Function(String message)? fetchAllAppointmentsError,
+    TResult Function(Set<Appointment> appointments)?
+        fetchAllAppointmentsSuccess,
+    TResult Function()? signupWithEmailAndPasswordLoading,
+    TResult Function(String message)? signupWithEmailAndPasswordError,
+    TResult Function()? signupWithEmailAndPasswordSuccess,
+    TResult Function()? signupWithGoogleLoading,
+    TResult Function(String message)? signupWithGoogleError,
+    TResult Function()? signupWithGoogleSuccess,
+    TResult Function()? updateProfileLoading,
+    TResult Function(String message)? updateProfileError,
+    TResult Function()? updateProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (authenticationError != null) {
+      return authenticationError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
+    required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
+        fetchAllAppointmentsLoading,
+    required TResult Function(_CommonStateFetchAllAppointmentsError value)
+        fetchAllAppointmentsError,
+    required TResult Function(_CommonStateFetchAllAppointmentsSuccess value)
+        fetchAllAppointmentsSuccess,
+    required TResult Function(
+            _CommonStateSignupWithEmailAndPasswordLoading value)
+        signupWithEmailAndPasswordLoading,
+    required TResult Function(_CommonStateSignupWithEmailAndPasswordError value)
+        signupWithEmailAndPasswordError,
+    required TResult Function(
+            _CommonStateSignupWithEmailAndPasswordSuccess value)
+        signupWithEmailAndPasswordSuccess,
+    required TResult Function(_CommonStateSignupWithGoogleLoading value)
+        signupWithGoogleLoading,
+    required TResult Function(_CommonStateSignupWithGoogleError value)
+        signupWithGoogleError,
+    required TResult Function(_CommonStateSignupWithGoogleSuccess value)
+        signupWithGoogleSuccess,
+    required TResult Function(_CommonStateUpdateProfileLoading value)
+        updateProfileLoading,
+    required TResult Function(_CommonStateUpdateProfileError value)
+        updateProfileError,
+    required TResult Function(_CommonStateUpdateProfileSuccess value)
+        updateProfileSuccess,
+  }) {
+    return authenticationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
+    TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
+        fetchAllAppointmentsLoading,
+    TResult? Function(_CommonStateFetchAllAppointmentsError value)?
+        fetchAllAppointmentsError,
+    TResult? Function(_CommonStateFetchAllAppointmentsSuccess value)?
+        fetchAllAppointmentsSuccess,
+    TResult? Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
+        signupWithEmailAndPasswordLoading,
+    TResult? Function(_CommonStateSignupWithEmailAndPasswordError value)?
+        signupWithEmailAndPasswordError,
+    TResult? Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
+        signupWithEmailAndPasswordSuccess,
+    TResult? Function(_CommonStateSignupWithGoogleLoading value)?
+        signupWithGoogleLoading,
+    TResult? Function(_CommonStateSignupWithGoogleError value)?
+        signupWithGoogleError,
+    TResult? Function(_CommonStateSignupWithGoogleSuccess value)?
+        signupWithGoogleSuccess,
+    TResult? Function(_CommonStateUpdateProfileLoading value)?
+        updateProfileLoading,
+    TResult? Function(_CommonStateUpdateProfileError value)? updateProfileError,
+    TResult? Function(_CommonStateUpdateProfileSuccess value)?
+        updateProfileSuccess,
+  }) {
+    return authenticationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
+    TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
+        fetchAllAppointmentsLoading,
+    TResult Function(_CommonStateFetchAllAppointmentsError value)?
+        fetchAllAppointmentsError,
+    TResult Function(_CommonStateFetchAllAppointmentsSuccess value)?
+        fetchAllAppointmentsSuccess,
+    TResult Function(_CommonStateSignupWithEmailAndPasswordLoading value)?
+        signupWithEmailAndPasswordLoading,
+    TResult Function(_CommonStateSignupWithEmailAndPasswordError value)?
+        signupWithEmailAndPasswordError,
+    TResult Function(_CommonStateSignupWithEmailAndPasswordSuccess value)?
+        signupWithEmailAndPasswordSuccess,
+    TResult Function(_CommonStateSignupWithGoogleLoading value)?
+        signupWithGoogleLoading,
+    TResult Function(_CommonStateSignupWithGoogleError value)?
+        signupWithGoogleError,
+    TResult Function(_CommonStateSignupWithGoogleSuccess value)?
+        signupWithGoogleSuccess,
+    TResult Function(_CommonStateUpdateProfileLoading value)?
+        updateProfileLoading,
+    TResult Function(_CommonStateUpdateProfileError value)? updateProfileError,
+    TResult Function(_CommonStateUpdateProfileSuccess value)?
+        updateProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (authenticationError != null) {
+      return authenticationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CommonStateAuthenticationError implements CommonState {
+  factory _CommonStateAuthenticationError(final String message) =
+      _$CommonStateAuthenticationErrorImpl;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$$CommonStateAuthenticationErrorImplCopyWith<
+          _$CommonStateAuthenticationErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -430,6 +946,8 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -451,6 +969,8 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -472,6 +992,8 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -497,6 +1019,9 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -531,6 +1056,9 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -562,6 +1090,9 @@ class _$CommonStateFetchAllAppointmentsLoadingImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -670,6 +1201,8 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -691,6 +1224,8 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -712,6 +1247,8 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -737,6 +1274,9 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -771,6 +1311,9 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -802,6 +1345,9 @@ class _$CommonStateFetchAllAppointmentsErrorImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -926,6 +1472,8 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -947,6 +1495,8 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -968,6 +1518,8 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -993,6 +1545,9 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -1027,6 +1582,9 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1058,6 +1616,9 @@ class _$CommonStateFetchAllAppointmentsSuccessImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1149,6 +1710,8 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -1170,6 +1733,8 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -1191,6 +1756,8 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -1216,6 +1783,9 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -1250,6 +1820,9 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1281,6 +1854,9 @@ class _$CommonStateSignupWithEmailAndPasswordLoadingImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1393,6 +1969,8 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -1414,6 +1992,8 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -1435,6 +2015,8 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -1460,6 +2042,9 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -1494,6 +2079,9 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1525,6 +2113,9 @@ class _$CommonStateSignupWithEmailAndPasswordErrorImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1616,6 +2207,8 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -1637,6 +2230,8 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -1658,6 +2253,8 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -1683,6 +2280,9 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -1717,6 +2317,9 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1748,6 +2351,9 @@ class _$CommonStateSignupWithEmailAndPasswordSuccessImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1830,6 +2436,8 @@ class _$CommonStateSignupWithGoogleLoadingImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -1851,6 +2459,8 @@ class _$CommonStateSignupWithGoogleLoadingImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -1872,6 +2482,8 @@ class _$CommonStateSignupWithGoogleLoadingImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -1897,6 +2509,9 @@ class _$CommonStateSignupWithGoogleLoadingImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -1931,6 +2546,9 @@ class _$CommonStateSignupWithGoogleLoadingImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -1962,6 +2580,9 @@ class _$CommonStateSignupWithGoogleLoadingImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2070,6 +2691,8 @@ class _$CommonStateSignupWithGoogleErrorImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -2091,6 +2714,8 @@ class _$CommonStateSignupWithGoogleErrorImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -2112,6 +2737,8 @@ class _$CommonStateSignupWithGoogleErrorImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -2137,6 +2764,9 @@ class _$CommonStateSignupWithGoogleErrorImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -2171,6 +2801,9 @@ class _$CommonStateSignupWithGoogleErrorImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2202,6 +2835,9 @@ class _$CommonStateSignupWithGoogleErrorImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2289,6 +2925,8 @@ class _$CommonStateSignupWithGoogleSuccessImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -2310,6 +2948,8 @@ class _$CommonStateSignupWithGoogleSuccessImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -2331,6 +2971,8 @@ class _$CommonStateSignupWithGoogleSuccessImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -2356,6 +2998,9 @@ class _$CommonStateSignupWithGoogleSuccessImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -2390,6 +3035,9 @@ class _$CommonStateSignupWithGoogleSuccessImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2421,6 +3069,9 @@ class _$CommonStateSignupWithGoogleSuccessImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2502,6 +3153,8 @@ class _$CommonStateUpdateProfileLoadingImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -2523,6 +3176,8 @@ class _$CommonStateUpdateProfileLoadingImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -2544,6 +3199,8 @@ class _$CommonStateUpdateProfileLoadingImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -2569,6 +3226,9 @@ class _$CommonStateUpdateProfileLoadingImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -2603,6 +3263,9 @@ class _$CommonStateUpdateProfileLoadingImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2634,6 +3297,9 @@ class _$CommonStateUpdateProfileLoadingImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2741,6 +3407,8 @@ class _$CommonStateUpdateProfileErrorImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -2762,6 +3430,8 @@ class _$CommonStateUpdateProfileErrorImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -2783,6 +3453,8 @@ class _$CommonStateUpdateProfileErrorImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -2808,6 +3480,9 @@ class _$CommonStateUpdateProfileErrorImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -2842,6 +3517,9 @@ class _$CommonStateUpdateProfileErrorImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2873,6 +3551,9 @@ class _$CommonStateUpdateProfileErrorImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?
@@ -2960,6 +3641,8 @@ class _$CommonStateUpdateProfileSuccessImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
+    required TResult Function() authenticated,
+    required TResult Function(String message) authenticationError,
     required TResult Function() fetchAllAppointmentsLoading,
     required TResult Function(String message) fetchAllAppointmentsError,
     required TResult Function(Set<Appointment> appointments)
@@ -2981,6 +3664,8 @@ class _$CommonStateUpdateProfileSuccessImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
+    TResult? Function()? authenticated,
+    TResult? Function(String message)? authenticationError,
     TResult? Function()? fetchAllAppointmentsLoading,
     TResult? Function(String message)? fetchAllAppointmentsError,
     TResult? Function(Set<Appointment> appointments)?
@@ -3002,6 +3687,8 @@ class _$CommonStateUpdateProfileSuccessImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
+    TResult Function()? authenticated,
+    TResult Function(String message)? authenticationError,
     TResult Function()? fetchAllAppointmentsLoading,
     TResult Function(String message)? fetchAllAppointmentsError,
     TResult Function(Set<Appointment> appointments)?
@@ -3027,6 +3714,9 @@ class _$CommonStateUpdateProfileSuccessImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonStateInitial value) initial,
+    required TResult Function(_CommonStateAuthenticated value) authenticated,
+    required TResult Function(_CommonStateAuthenticationError value)
+        authenticationError,
     required TResult Function(_CommonStateFetchAllAppointmentsLoading value)
         fetchAllAppointmentsLoading,
     required TResult Function(_CommonStateFetchAllAppointmentsError value)
@@ -3061,6 +3751,9 @@ class _$CommonStateUpdateProfileSuccessImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonStateInitial value)? initial,
+    TResult? Function(_CommonStateAuthenticated value)? authenticated,
+    TResult? Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult? Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult? Function(_CommonStateFetchAllAppointmentsError value)?
@@ -3092,6 +3785,9 @@ class _$CommonStateUpdateProfileSuccessImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonStateInitial value)? initial,
+    TResult Function(_CommonStateAuthenticated value)? authenticated,
+    TResult Function(_CommonStateAuthenticationError value)?
+        authenticationError,
     TResult Function(_CommonStateFetchAllAppointmentsLoading value)?
         fetchAllAppointmentsLoading,
     TResult Function(_CommonStateFetchAllAppointmentsError value)?

@@ -1,13 +1,10 @@
 import 'package:core/di/locator.dart';
+import 'package:core/domain/usecases/common/check.auth.status.dart';
 import 'package:core/domain/usecases/common/fetch.all.appointments.dart';
 import 'package:core/domain/usecases/common/signup.with.email.password.dart';
 import 'package:core/domain/usecases/common/signup.with.google.dart';
 import 'package:core/domain/usecases/common/update.profile.dart';
-// import 'package:core/domain/usecases/patient/fetch.patient.profile.dart';
-// import 'package:core/domain/usecases/practitioner/fetch.practitioner.profile.dart';
 import 'package:core/models/common/appointment.dart';
-import 'package:core/models/patient/patient.dart';
-import 'package:core/models/practitioner/practitioner.dart';
 import 'package:core/utils/typedefs.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -20,13 +17,23 @@ class CommonCubit extends Cubit<CommonState> {
   final SignupWithEmailAndPassword _signupWithEmailAndPassword;
   final SignupWithGoogle _signupWithGoogle;
   final UpdateProfile _updateProfile;
+  final CheckAuthStatus _checkAuthStatus;
 
   CommonCubit()
       : _fetchAllAppointments = locator.get<FetchAllAppointments>(),
         _signupWithEmailAndPassword = locator.get<SignupWithEmailAndPassword>(),
         _signupWithGoogle = locator.get<SignupWithGoogle>(),
         _updateProfile = locator.get<UpdateProfile>(),
+        _checkAuthStatus = locator.get<CheckAuthStatus>(),
         super(CommonState.initial());
+
+  void init() async {
+    var result = await _checkAuthStatus(const NoParam());
+    result.fold(
+      (l) => emit(CommonState.authenticationError(l.message)),
+      (r) => emit(CommonState.authenticated()),
+    );
+  }
 
   Stream<List<Appointment>> fetchAllPatientAppointments() => _fetchAllAppointments(UserType.patient);
 

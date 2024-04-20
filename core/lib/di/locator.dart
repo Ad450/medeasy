@@ -1,6 +1,7 @@
 import 'package:core/domain/repository/common.dart';
 import 'package:core/domain/repository/patient.dart';
 import 'package:core/domain/repository/practitioner.dart';
+import 'package:core/domain/usecases/common/check.auth.status.dart';
 import 'package:core/domain/usecases/common/fetch.all.appointments.dart';
 import 'package:core/domain/usecases/common/signup.with.email.password.dart';
 import 'package:core/domain/usecases/common/signup.with.facebook.dart';
@@ -52,6 +53,9 @@ void setupLocator() {
   );
   locator.registerLazySingleton<UpdateProfile>(
     () => UpdateProfile(locator.get<CommonRepository>()),
+  );
+  locator.registerLazySingleton<CheckAuthStatus>(
+    () => CheckAuthStatus(locator.get<CommonRepository>()),
   );
 
   locator.registerLazySingleton<FetchPatientProfile>(

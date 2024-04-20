@@ -4,6 +4,9 @@ part of 'common.cubit.dart';
 sealed class CommonState with _$CommonState {
   factory CommonState.initial() = _CommonStateInitial;
 
+  factory CommonState.authenticated() = _CommonStateAuthenticated;
+  factory CommonState.authenticationError(String message) = _CommonStateAuthenticationError;
+
   factory CommonState.fetchAllAppointmentsLoading() = _CommonStateFetchAllAppointmentsLoading;
   factory CommonState.fetchAllAppointmentsError(String message) = _CommonStateFetchAllAppointmentsError;
   factory CommonState.fetchAllAppointmentsSuccess(Set<Appointment> appointments) =

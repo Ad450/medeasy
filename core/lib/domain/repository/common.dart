@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:core/domain/usecases/common/update.profile.dart';
 import 'package:core/models/common/appointment.dart';
 import 'package:core/models/patient/patient.dart';
@@ -22,6 +24,7 @@ sealed class CommonRepository {
 
   Stream<List<Appointment>> fetchAllAppointments(UserType type);
   Future<VoidType> updateProfile(UpdateProfileParams params);
+  bool checkAuthStatus();
 }
 
 class CommonRepositoryImpl implements CommonRepository {
@@ -136,6 +139,23 @@ class CommonRepositoryImpl implements CommonRepository {
       return const VoidType();
     } else {
       throw ApiError("could not sign up - operation incomplete", source: "signupGoogle");
+    }
+  }
+
+  @override
+  bool checkAuthStatus() {
+    try {
+      _localStorage.getString(LocalKeys.id.name);
+      final uid = FirebaseAuth.instance.currentUser?.uid;
+      if (uid != null) {
+        return true;
+      }
+      return false;
+    } on LocalIdNullError catch (e) {
+      log(e.toString());
+      return false;
+    } catch (e) {
+      throw ApiError("auth status check error, $e");
     }
   }
 }

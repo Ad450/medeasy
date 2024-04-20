@@ -11,5 +11,6 @@ export "package:core/models/common/day.dart";
 export "package:core/models/common/service.dart";
 export "package:core/models/patient/patient.dart";
 export "package:core/models/practitioner/practitioner.dart";
+export "package:core/storage/local/local.storage.dart";
 export "package:core/utils/errors.dart";
 export "package:core/utils/typedefs.dart";

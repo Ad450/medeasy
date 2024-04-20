@@ -17,7 +17,7 @@ sealed class CommonRepository {
     required UserType type,
   });
 
-  Future<VoidType> signupWithGoogle(UserType tpye);
+  Future<VoidType> signupWithGoogle(UserType type);
   Future<VoidType> signupWithFacebook();
 
   Stream<List<Appointment>> fetchAllAppointments(UserType type);

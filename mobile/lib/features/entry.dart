@@ -1,6 +1,5 @@
-import 'package:core/state/common/common.cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobile/app/app.router.dart';
 import 'package:mobile/app/app.theme.dart';
 
@@ -9,9 +8,20 @@ class MedeasyPatient extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CommonCubit()..init(),
-      child: MaterialApp.router(
+    //   BlocProvider(
+    //   create: (context) => CommonCubit()..init(),
+    //   child: ScreenUtilInit(
+    //     designSize: const Size(367, 812),
+    //     builder: (_, child) => MaterialApp.router(
+    //       title: 'Medeasy',
+    //       theme: appTheme,
+    //       routerConfig: AppRouter().config(),
+    //     ),
+    //   ),
+    // );
+    return ScreenUtilInit(
+      designSize: const Size(367, 812),
+      builder: (_, child) => MaterialApp.router(
         title: 'Medeasy',
         theme: appTheme,
         routerConfig: AppRouter().config(),

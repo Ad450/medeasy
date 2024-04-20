@@ -45,9 +45,7 @@ void setupLocator() {
   locator.registerLazySingleton<SignupWithFacebook>(
     () => SignupWithFacebook(locator.get<CommonRepository>()),
   );
-  locator.registerLazySingleton<SignupWithFacebook>(
-    () => SignupWithFacebook(locator.get<CommonRepository>()),
-  );
+
   locator.registerLazySingleton<SignupWithGoogle>(
     () => SignupWithGoogle(locator.get<CommonRepository>()),
   );

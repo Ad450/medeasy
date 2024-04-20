@@ -7,6 +7,7 @@ import 'package:mobile/features/entry.dart';
 
 void main() async {
   try {
+    WidgetsFlutterBinding.ensureInitialized();
     setupLocator();
     await LocalStorage.init();
   } catch (e) {

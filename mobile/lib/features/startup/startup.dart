@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile/features/splash/splash.dart';
 
 @RoutePage()
 class StartupView extends StatelessWidget {
@@ -7,6 +8,6 @@ class StartupView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const SplashView();
   }
 }

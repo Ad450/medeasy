@@ -40,6 +40,7 @@ final ThemeData appTheme = ThemeData(
       fontSize: 20,
       fontWeight: FontWeight.bold,
       height: 23.44 / 20,
+      color: Color(0xff288CE8),
     ),
     titleLarge: TextStyle(
       fontFamily: 'Poppins',

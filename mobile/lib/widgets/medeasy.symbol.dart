@@ -7,15 +7,21 @@ class MedeasySymbol extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Image.asset(AppAssets.medeasyImage),
-        SizedBox(width: 10.w),
-        Text(
-          "Medeasy",
-          style: Theme.of(context).textTheme.displayLarge,
-        ),
-      ],
+    return SizedBox(
+      width: 180.w,
+      child: Stack(
+        children: <Widget>[
+          Image.asset(AppAssets.medeasyImage),
+          Positioned(
+            right: 45.w,
+            bottom: 10.h,
+            child: Text(
+              "MEDEASY",
+              style: Theme.of(context).textTheme.displayLarge,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

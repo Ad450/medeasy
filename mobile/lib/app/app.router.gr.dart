@@ -15,13 +15,53 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    CreateProfileRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CreateProfileView(),
+      );
+    },
+    SignupRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SignupView(),
+      );
+    },
     StartupRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const StartupView(),
       );
-    }
+    },
   };
+}
+
+/// generated route for
+/// [CreateProfileView]
+class CreateProfileRoute extends PageRouteInfo<void> {
+  const CreateProfileRoute({List<PageRouteInfo>? children})
+      : super(
+          CreateProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CreateProfileRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SignupView]
+class SignupRoute extends PageRouteInfo<void> {
+  const SignupRoute({List<PageRouteInfo>? children})
+      : super(
+          SignupRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SignupRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

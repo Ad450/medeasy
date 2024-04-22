@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobile/app/app.asset.dart';
+import 'package:mobile/app/app.router.dart';
 import 'package:mobile/widgets/medeasy.button.dart';
 import 'package:mobile/widgets/medeasy.wrapper.dart';
 
@@ -28,7 +30,7 @@ class SplashView extends StatelessWidget {
               ],
             ),
             MedeasyButton(
-              onTap: () {},
+              onTap: () => context.router.push(const SignupRoute()),
               buttonText: "Get Started",
             ),
           ],

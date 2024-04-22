@@ -14,26 +14,26 @@ final ThemeData appTheme = ThemeData(
     surface: Color(0xffE8E8E8),
     onSurface: Colors.black,
   ),
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ButtonStyle(
-      backgroundColor: const MaterialStatePropertyAll<Color>(Colors.pink),
-      elevation: const MaterialStatePropertyAll<double>(2.0),
-      shape: MaterialStatePropertyAll<OutlinedBorder>(
-        RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-      ),
-    ),
-  ),
-  inputDecorationTheme: InputDecorationTheme(
-    border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(10),
-      borderSide: BorderSide.none,
-      gapPadding: 3.0,
-    ),
-    filled: true,
-    fillColor: Colors.grey.withOpacity(0.2),
-  ),
+  // elevatedButtonTheme: ElevatedButtonThemeData(
+  //   style: ButtonStyle(
+  //     backgroundColor: const MaterialStatePropertyAll<Color>(Colors.pink),
+  //     elevation: const MaterialStatePropertyAll<double>(2.0),
+  //     shape: MaterialStatePropertyAll<OutlinedBorder>(
+  //       RoundedRectangleBorder(
+  //         borderRadius: BorderRadius.circular(20),
+  //       ),
+  //     ),
+  //   ),
+  // ),
+  // inputDecorationTheme: InputDecorationTheme(
+  //   border: OutlineInputBorder(
+  //     borderRadius: BorderRadius.circular(10),
+  //     borderSide: BorderSide.none,
+  //     gapPadding: 3.0,
+  //   ),
+  //   filled: true,
+  //   fillColor: Colors.grey.withOpacity(0.2),
+  // ),
   textTheme: const TextTheme(
     displayLarge: TextStyle(
       fontFamily: 'Roboto',
@@ -51,7 +51,7 @@ final ThemeData appTheme = ThemeData(
     titleMedium: TextStyle(
       fontFamily: 'Poppins',
       fontSize: 15,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       height: 22 / 15,
     ),
     bodyLarge: TextStyle(
@@ -73,9 +73,9 @@ final ThemeData appTheme = ThemeData(
       height: 22.5 / 15,
     ),
   ),
-  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    selectedIconTheme: IconThemeData(color: Color(0xff288CE8), weight: 10),
-    unselectedIconTheme: IconThemeData(color: Color(0xffBCBCBC), weight: 10),
-    selectedItemColor: Colors.pink,
-  ),
+  // bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+  //   selectedIconTheme: IconThemeData(color: Color(0xff288CE8), weight: 10),
+  //   unselectedIconTheme: IconThemeData(color: Color(0xffBCBCBC), weight: 10),
+  //   selectedItemColor: Colors.pink,
+  // ),
 );

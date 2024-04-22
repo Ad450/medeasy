@@ -43,7 +43,10 @@ class MedeasyButton extends StatelessWidget {
               : Center(
                   child: Text(
                     buttonText,
-                    style: buttonTextStyle ?? Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
+                    style: buttonTextStyle ??
+                        Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              color: textColor ?? Colors.white,
+                            ),
                   ),
                 ),
         ),

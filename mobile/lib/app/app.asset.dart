@@ -5,4 +5,5 @@ class AppAssets {
   static const google = 'assets/images/google.png';
   static const fb = 'assets/images/fb.png';
   static const camera = 'assets/images/camera.png';
+  static const notification = 'assets/images/notification.png';
 }

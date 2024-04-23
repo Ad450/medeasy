@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    AppointmentsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AppointmentsView(),
+      );
+    },
     CreateProfileRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -34,6 +40,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [AppointmentsView]
+class AppointmentsRoute extends PageRouteInfo<void> {
+  const AppointmentsRoute({List<PageRouteInfo>? children})
+      : super(
+          AppointmentsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AppointmentsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

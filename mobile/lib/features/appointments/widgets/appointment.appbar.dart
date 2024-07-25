@@ -52,9 +52,15 @@ class AppointmenAppBar extends StatelessWidget {
           left: 35,
           child: SizedBox(
             width: 313.w,
-            child: MedeasyTextField(
-              height: 53,
-              controller: TextEditingController(),
+            child: Material(
+              elevation: 5,
+              borderRadius: BorderRadius.circular(20),
+              child: MedeasyTextField(
+                height: 53,
+                controller: TextEditingController(),
+                hintText: 'search',
+                prefixIcon: const Icon(Icons.search, color: Colors.black),
+              ),
             ),
           ),
         )

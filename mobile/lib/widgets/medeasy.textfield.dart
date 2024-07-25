@@ -7,6 +7,7 @@ class MedeasyTextField extends StatelessWidget {
   final double? height;
   final double? width;
   final String? labelText;
+  final Icon? prefixIcon;
   const MedeasyTextField({
     required this.controller,
     this.hintText,
@@ -14,6 +15,7 @@ class MedeasyTextField extends StatelessWidget {
     this.width,
     this.height,
     this.labelText,
+    this.prefixIcon,
     super.key,
   });
 
@@ -22,6 +24,7 @@ class MedeasyTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       showCursor: true,
+      cursorColor: Colors.black,
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,
@@ -29,10 +32,15 @@ class MedeasyTextField extends StatelessWidget {
         hintStyle: hintTextStyle,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: const BorderSide(color: Colors.red, style: BorderStyle.none),
+          borderSide: const BorderSide(color: Colors.white, style: BorderStyle.none),
         ),
         labelText: labelText,
         alignLabelWithHint: true,
+        prefixIcon: prefixIcon,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20),
+          borderSide: BorderSide(color: Colors.grey.withOpacity(0.5), style: BorderStyle.none),
+        ),
       ),
     );
   }

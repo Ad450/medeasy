@@ -23,46 +23,49 @@ class AuthToggleButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: const Color(0Xff288CE8),
       ),
-      child: Row(
-        children: [
-          GestureDetector(
-            onTap: onLoginTapped,
-            child: Container(
-              height: 63.h,
-              width: 180.w,
-              decoration: BoxDecoration(
-                color: loginSelected ? Colors.white : const Color(0xff288CE8),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Center(
-                child: Text(
-                  'Login',
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: loginSelected ? const Color(0xff288CE8) : Colors.white,
-                      ),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            GestureDetector(
+              onTap: onLoginTapped,
+              child: Container(
+                height: 63.h,
+                width: 180.w,
+                decoration: BoxDecoration(
+                  color: loginSelected ? Colors.white : const Color(0xff288CE8),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Text(
+                    'Login',
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: loginSelected ? const Color(0xff288CE8) : Colors.white,
+                        ),
+                  ),
                 ),
               ),
             ),
-          ),
-          GestureDetector(
-            onTap: onSignupTapped,
-            child: Container(
-              height: 63.h,
-              width: 167.w,
-              decoration: BoxDecoration(
-                  color: signupSelected ? Colors.white : const Color(0xff288CE8),
-                  borderRadius: BorderRadius.circular(20)),
-              child: Center(
-                child: Text(
-                  'Signup',
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: signupSelected ? const Color(0xff288CE8) : Colors.white,
-                      ),
+            GestureDetector(
+              onTap: onSignupTapped,
+              child: Container(
+                height: 63.h,
+                width: 167.w,
+                decoration: BoxDecoration(
+                    color: signupSelected ? Colors.white : const Color(0xff288CE8),
+                    borderRadius: BorderRadius.circular(20)),
+                child: Center(
+                  child: Text(
+                    'Signup',
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: signupSelected ? const Color(0xff288CE8) : Colors.white,
+                        ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

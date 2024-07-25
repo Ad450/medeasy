@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "925477639131",
+    "project_id": "code8-medeasy",
+    "storage_bucket": "code8-medeasy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:925477639131:android:3593b86df458d15f794dfe",
+        "android_client_info": {
+          "package_name": "com.example.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbwMAfvfZWz4jI1oANYq2GEOxAF7Spu4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

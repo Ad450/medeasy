@@ -7,7 +7,7 @@ class MedeasyWrapper extends StatelessWidget {
   final List<Widget>? trailing;
   final Widget child;
 
-  MedeasyWrapper({
+  const MedeasyWrapper({
     this.trailing,
     this.hasLeading = false,
     required this.child,
@@ -17,6 +17,7 @@ class MedeasyWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         leading: hasLeading ? const MedeasyBackButton() : null,
         title: const MedeasySymbol(),

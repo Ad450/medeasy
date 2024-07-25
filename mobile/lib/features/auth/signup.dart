@@ -1,10 +1,9 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobile/features/auth/widgets/auth.widget.dart';
 import 'package:mobile/widgets/medeasy.wrapper.dart';
 
-@RoutePage()
+// @RoutePage()
 class SignupView extends StatelessWidget {
   const SignupView({super.key});
 
@@ -15,6 +14,7 @@ class SignupView extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(top: 74.h),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Align(

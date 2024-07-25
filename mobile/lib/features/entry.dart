@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobile/app/app.router.dart';
+import 'package:get/get.dart';
 import 'package:mobile/app/app.theme.dart';
+import 'package:mobile/features/splash/splash.dart';
 
 class MedeasyPatient extends StatelessWidget {
   const MedeasyPatient({super.key});
@@ -21,10 +22,10 @@ class MedeasyPatient extends StatelessWidget {
     // );
     return ScreenUtilInit(
       designSize: const Size(367, 812),
-      builder: (_, child) => MaterialApp.router(
+      builder: (_, child) => GetMaterialApp(
         title: 'Medeasy',
         theme: appTheme,
-        routerConfig: AppRouter().config(),
+        home: const SplashView(),
       ),
     );
   }

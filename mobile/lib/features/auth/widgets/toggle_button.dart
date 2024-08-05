@@ -40,7 +40,9 @@ class AuthToggleButton extends StatelessWidget {
                   child: Text(
                     'Login',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: loginSelected ? const Color(0xff288CE8) : Colors.white,
+                          color: loginSelected
+                              ? const Color(0xff288CE8)
+                              : Colors.white,
                         ),
                   ),
                 ),
@@ -52,13 +54,16 @@ class AuthToggleButton extends StatelessWidget {
                 height: 63.h,
                 width: 167.w,
                 decoration: BoxDecoration(
-                    color: signupSelected ? Colors.white : const Color(0xff288CE8),
+                    color:
+                        signupSelected ? Colors.white : const Color(0xff288CE8),
                     borderRadius: BorderRadius.circular(20)),
                 child: Center(
                   child: Text(
                     'Signup',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                          color: signupSelected ? const Color(0xff288CE8) : Colors.white,
+                          color: signupSelected
+                              ? const Color(0xff288CE8)
+                              : Colors.white,
                         ),
                   ),
                 ),

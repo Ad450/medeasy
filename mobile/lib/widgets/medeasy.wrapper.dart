@@ -1,30 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/widgets/medeasy.back.button.dart';
-import 'package:mobile/widgets/medeasy.symbol.dart';
+import 'package:mobile/widgets/app_bar.dart';
 
 class MedeasyWrapper extends StatelessWidget {
-  final bool hasLeading;
-  final List<Widget>? trailing;
-  final Widget child;
-
   const MedeasyWrapper({
-    this.trailing,
-    this.hasLeading = false,
     required this.child,
+    this.actions,
+    this.hasLeading = false,
+    this.trailing,
     super.key,
   });
+  final bool hasLeading;
+  final List<Widget>? actions;
+  final Widget? trailing;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      appBar: AppBar(
-        leading: hasLeading ? const MedeasyBackButton() : null,
-        title: const MedeasySymbol(),
-        centerTitle: true,
-        actions: trailing,
+      appBar: AdaptiveAppbar(
+        trailing: trailing,
         backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
+        actions: actions,
       ),
       body: child,
     );

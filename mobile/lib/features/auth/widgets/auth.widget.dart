@@ -86,7 +86,8 @@ class _AuthWidgetState extends State<AuthWidget> {
                     ),
               ),
               SizedBox(height: 10.h),
-              GoogleAndFbButton(onGoogleTap: () {}, isLoading: false, onFbTap: () {}),
+              GoogleAndFbButton(
+                  onGoogleTap: () {}, isLoading: false, onFbTap: () {}),
             ],
           ),
         ),

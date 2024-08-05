@@ -40,12 +40,14 @@ class LabeledTextfield extends StatelessWidget {
             hintStyle: hintTextStyle,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-              borderSide: const BorderSide(color: Colors.white, style: BorderStyle.none),
+              borderSide: const BorderSide(
+                  color: Colors.white, style: BorderStyle.none),
             ),
             alignLabelWithHint: true,
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-              borderSide: const BorderSide(color: Colors.white, style: BorderStyle.none),
+              borderSide: const BorderSide(
+                  color: Colors.white, style: BorderStyle.none),
             ),
           ),
         ),

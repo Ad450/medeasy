@@ -24,32 +24,37 @@ class ScheduleAppointmentCard extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 9),
-                child: Image.asset(AppAssets.doctor, height: 81.h, width: 80.w, fit: BoxFit.cover),
+                child: Image.asset(AppAssets.doctor,
+                    height: 81.h, width: 80.w, fit: BoxFit.cover),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 21),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 21),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
                       'Dr. Kim Lee',
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 16, fontWeight: FontWeight.w600),
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyLarge
+                          ?.copyWith(fontSize: 16, fontWeight: FontWeight.w600),
                     ),
                     SizedBox(height: 2.h),
                     Text(
                       'Neurosurgeon',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyLarge
-                          ?.copyWith(fontSize: 12, fontWeight: FontWeight.w500, color: const Color(0xffB4B1B1)),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0xffB4B1B1)),
                     ),
                     const Row(children: [Ratings(rating: 2)]),
                     Text(
                       '8:00 AM - 5: 00 PM',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyLarge
-                          ?.copyWith(fontSize: 10, fontWeight: FontWeight.w500, color: const Color(0xffB4B1B1)),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0xffB4B1B1)),
                     ),
                     // const UpcomingAppointmentTime(time: "11:00AM"),
                     // const UpcomingAppointmentCalendar(date: "12 -04-2024"),

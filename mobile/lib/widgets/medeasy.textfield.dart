@@ -32,14 +32,16 @@ class MedeasyTextField extends StatelessWidget {
         hintStyle: hintTextStyle,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: const BorderSide(color: Colors.white, style: BorderStyle.none),
+          borderSide:
+              const BorderSide(color: Colors.white, style: BorderStyle.none),
         ),
         labelText: labelText,
         alignLabelWithHint: true,
         prefixIcon: prefixIcon,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: BorderSide(color: Colors.grey.withOpacity(0.5), style: BorderStyle.none),
+          borderSide: BorderSide(
+              color: Colors.grey.withOpacity(0.5), style: BorderStyle.none),
         ),
       ),
     );

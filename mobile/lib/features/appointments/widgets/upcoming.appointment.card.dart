@@ -21,7 +21,8 @@ class UpcomingAppointmentCard extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.only(left: 9),
-            child: Image.asset(AppAssets.doctor, height: 124.h, width: 129.w, fit: BoxFit.cover),
+            child: Image.asset(AppAssets.doctor,
+                height: 124.h, width: 129.w, fit: BoxFit.cover),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 21),
@@ -30,15 +31,18 @@ class UpcomingAppointmentCard extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'Dr. Kim Lee',
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 20, fontWeight: FontWeight.w600),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge
+                      ?.copyWith(fontSize: 20, fontWeight: FontWeight.w600),
                 ),
                 SizedBox(height: 2.h),
                 Text(
                   'Neurosurgeon',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.copyWith(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.white),
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white),
                 ),
                 const UpcomingAppointmentTime(time: "11:00AM"),
                 const UpcomingAppointmentCalendar(date: "12 -04-2024"),

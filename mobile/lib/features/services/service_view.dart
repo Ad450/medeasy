@@ -30,7 +30,8 @@ class _ServiceContainer extends StatelessWidget {
   final String image;
   final Color color;
 
-  const _ServiceContainer({required this.image, required this.color, super.key});
+  const _ServiceContainer(
+      {required this.image, required this.color, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,8 @@ class _ServiceContainer extends StatelessWidget {
       child: Container(
         height: 87.h,
         width: 88.w,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(8), color: color),
+        decoration:
+            BoxDecoration(borderRadius: BorderRadius.circular(8), color: color),
         child: Center(
           child: Image.asset(image),
         ),

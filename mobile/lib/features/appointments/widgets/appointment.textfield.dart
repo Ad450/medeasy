@@ -28,13 +28,14 @@ class AppointmentTextfield extends StatelessWidget {
         filled: true,
         fillColor: Colors.white,
         hintText: 'search',
-        hintStyle: Theme.of(context)
-            .textTheme
-            .bodySmall
-            ?.copyWith(fontSize: 13, fontWeight: FontWeight.w500, color: const Color(0xffBBBBBB)),
+        hintStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
+            fontSize: 13,
+            fontWeight: FontWeight.w500,
+            color: const Color(0xffBBBBBB)),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
-          borderSide: const BorderSide(color: Colors.red, style: BorderStyle.none),
+          borderSide:
+              const BorderSide(color: Colors.red, style: BorderStyle.none),
         ),
         labelText: labelText,
         alignLabelWithHint: true,

@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile/app/app.asset.dart';
 
@@ -8,7 +7,7 @@ class MedeasyBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.back(),
+      onTap: () => Navigator.pop(context),
       child: Image.asset(AppAssets.arrowBack),
     );
   }

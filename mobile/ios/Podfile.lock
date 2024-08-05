@@ -946,6 +946,8 @@ PODS:
     - abseil/meta/type_traits
     - abseil/xcprivacy
   - abseil/xcprivacy (1.20240116.2)
+  - animated_rating_stars (0.0.1):
+    - Flutter
   - AppAuth (1.7.4):
     - AppAuth/Core (= 1.7.4)
     - AppAuth/ExternalUserAgent (= 1.7.4)
@@ -1160,6 +1162,7 @@ PODS:
     - FlutterMacOS
 
 DEPENDENCIES:
+  - animated_rating_stars (from `.symlinks/plugins/animated_rating_stars/ios`)
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
@@ -1196,6 +1199,8 @@ SPEC REPOS:
     - RecaptchaInterop
 
 EXTERNAL SOURCES:
+  animated_rating_stars:
+    :path: ".symlinks/plugins/animated_rating_stars/ios"
   cloud_firestore:
     :path: ".symlinks/plugins/cloud_firestore/ios"
   firebase_auth:
@@ -1213,6 +1218,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   abseil: d121da9ef7e2ff4cab7666e76c5a3e0915ae08c3
+  animated_rating_stars: 4627b871e2cfeddfe811952f5b3e9dc62a9bbe46
   AppAuth: 182c5b88630569df5acb672720534756c29b3358
   BoringSSL-GRPC: 1e2348957acdbcad360b80a264a90799984b2ba6
   cloud_firestore: ec5623634fc3b82f7b23a6e87f116c953eae714d
@@ -1244,6 +1250,6 @@ SPEC CHECKSUMS:
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   shared_preferences_foundation: b4c3b4cddf1c21f02770737f147a3f5da9d39695
 
-PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+PODFILE CHECKSUM: 7be2f5f74864d463a8ad433546ed1de7e0f29aef
 
 COCOAPODS: 1.15.2

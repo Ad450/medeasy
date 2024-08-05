@@ -13,10 +13,8 @@ class UpcomingAppointmentTime extends StatelessWidget {
         const SizedBox(width: 4),
         Text(
           time,
-          style: Theme.of(context)
-              .textTheme
-              .bodyLarge
-              ?.copyWith(fontSize: 10, fontWeight: FontWeight.w500, color: Colors.white),
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              fontSize: 10, fontWeight: FontWeight.w500, color: Colors.white),
         ),
       ],
     );
@@ -35,10 +33,8 @@ class UpcomingAppointmentCalendar extends StatelessWidget {
         const SizedBox(width: 4),
         Text(
           date,
-          style: Theme.of(context)
-              .textTheme
-              .bodyLarge
-              ?.copyWith(fontSize: 10, fontWeight: FontWeight.w500, color: Colors.white),
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              fontSize: 10, fontWeight: FontWeight.w500, color: Colors.white),
         ),
       ],
     );
